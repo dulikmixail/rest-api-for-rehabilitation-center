@@ -1,0 +1,29 @@
+{
+  "name": "rest-api-for-rehabilitation-center",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dulikmixail/rest-api-for-rehabilitation-center.git"
+  },
+  "author": "Dulik Mikhail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dulikmixail/rest-api-for-rehabilitation-center/issues"
+  },
+  "homepage": "https://github.com/dulikmixail/rest-api-for-rehabilitation-center#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.2.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/mongoose": "^5.2.0",
+    "nodemon": "^1.18.2"
+  }
+}
