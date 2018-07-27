@@ -28,15 +28,13 @@ let employeeSchema = new Schema({
         type: String
     },
     educationFile: {
-        data: Buffer,
-        contentType: String
+        type: String
     },
     refresherCoursesDate: {
         type: Date
     },
     placeRefresherCoursesFile: {
-        data: Buffer,
-        contentType: String
+        type: String
     },
     branch: {
         type: String,
@@ -49,12 +47,18 @@ let employeeSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Post',
         required: true
+    },
+    login: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        select: false,
+        required: true
     }
 });
 let Employee = mongoose.model('Employee', employeeSchema);
-
-
-
 
 //CRUD - Create Read Update Delete
 

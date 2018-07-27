@@ -1,0 +1,15 @@
+const mongoose = require('mongoose')
+    , Schema = mongoose.Schema;
+
+let phRFormSchema = new Schema({
+    title: {
+        type: String,
+        require: true
+    },
+    level : {
+        type: [Schema.Types.ObjectId],
+        ref: 'PhRFLevel'
+    }
+});
+
+let PhRForm = mongoose.model('PhRForm', phRFormSchema);

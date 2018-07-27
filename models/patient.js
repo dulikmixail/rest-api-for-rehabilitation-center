@@ -2,9 +2,6 @@ const mongoose = require('mongoose')
     , Schema = mongoose.Schema;
 
 let patientSchema = new mongoose.Schema({
-    hospitalizationDate: {
-        type: Date
-    },
     surname: {
         type: String,
         required: true
@@ -27,25 +24,8 @@ let patientSchema = new mongoose.Schema({
         type: [String],
         required: true
     },
-    senderMedicalFacility: {
-        type: String
-    },
-    medicalRecord: {
-        type: Schema.Types.ObjectId,
-        ref: 'MedicalRecord',
-    },
-    diagnosis: {
-        type: String
-    },
-    finalDiagnosis: {
-        type: String
-    },
-    howIncoming: {
-        type: Schema.Types.ObjectId,
-        ref: 'HowIncoming',
-    },
-    issuanceDate: {
-        type: Date
+    medicalCardNumber: {
+        type: Number
     },
     note: {
         type: String,
@@ -57,34 +37,21 @@ let patientSchema = new mongoose.Schema({
         type: String
     },
     isActive: {
-        type: boolean
-    },
-    department: {
-        type: Schema.Types.ObjectId,
-        ref: 'Department',
+        type: Boolean
     },
     gender: {
         type: Schema.Types.ObjectId,
         ref: 'Gender',
         required: true
     },
-    typeIncoming: {
-        type: Schema.Types.ObjectId,
-        ref: 'TypeIncoming',
-    },
-    roomNumber: {
-        type: String
-    },
-    procedures: {
-        type: [Schema.Types.ObjectId],
-        ref: 'Procedure'
-    },
     login: {
-        type: String
+        type: String,
+        required: true
     },
     password: {
         type: String,
-        select: false
+        select: false,
+        required: true
     }
 });
 
