@@ -8,10 +8,12 @@ let historyIncomingSchema = new Schema({
         required: true
     },
     senderMedicalFacility: {
-        type: String
+        type: String,
+        required: true
     },
     diagnosis: {
-        type: String
+        type: String,
+        required: true
     },
     finalDiagnosis: {
         type: String
@@ -23,20 +25,25 @@ let historyIncomingSchema = new Schema({
     issuanceDate: {
         type: Date
     },
-    department: {
-        type: Schema.Types.ObjectId,
-        ref: 'Department',
-    },
     typeIncoming: {
         type: Schema.Types.ObjectId,
         ref: 'TypeIncoming',
     },
-    roomNumber: {
-        type: String
+    department: {
+        type: Schema.Types.ObjectId,
+        ref: 'Department',
+    },
+    chamber: {
+        type: Schema.Types.ObjectId,
+        ref: 'Сhamber',
     },
     note: {
         type: String,
     },
+    examination: {
+        type: Schema.Types.ObjectId,
+        ref: 'Examination'
+    }
 });
 
 let HistoryIncoming = mongoose.model('HistoryIncoming',historyIncomingSchema);

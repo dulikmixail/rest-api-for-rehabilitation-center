@@ -17,4 +17,4 @@ let physicalRehabilitationSchema = new Schema({
     }
 });
 
-mongoose.model('PhysicalRehabilitation', physicalRehabilitationSchema);
+let PhysicalRehabilitation = mongoose.model('PhysicalRehabilitation', physicalRehabilitationSchema);

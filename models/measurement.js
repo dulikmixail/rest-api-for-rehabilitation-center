@@ -7,15 +7,15 @@ let measurementSchema = new Schema({
         require: true
     },
     systolicPressure: {
-        type: String,
+        type: Number,
         require: true
     },
     diastolicPressure: {
-        type: String,
+        type: Number,
         require: true
     },
     heartRate: {
-        type: String,
+        type: Number,
         require: true
     },
     signsOfFatigue:{

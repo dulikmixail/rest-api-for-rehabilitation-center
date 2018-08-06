@@ -14,10 +14,6 @@ let examinationSchema = new Schema({
     },
     date:{
       type: Date
-    },
-    physicalRehabilitation: {
-        type: Schema.Types.ObjectId,
-        ref: 'PhysicalRehabilitation'
     }
 });
 

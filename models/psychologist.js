@@ -1,11 +1,12 @@
 const mongoose = require('mongoose')
     , Schema = mongoose.Schema;
 
-let treatmentSchema = new Schema({
+
+let psychologistSchema = new Schema({
     title: {
         type: String,
         required: true
     }
 });
 
-mongoose.model('Treatment', treatmentSchema)
+let Psychologist = mongoose.model('Psychologist', psychologistSchema);

@@ -8,4 +8,4 @@ let selfServiceSchema = new Schema({
     }
 });
 
-mongoose.model('SelfService', selfServiceSchema)
+let SelfService = mongoose.model('SelfService', selfServiceSchema);

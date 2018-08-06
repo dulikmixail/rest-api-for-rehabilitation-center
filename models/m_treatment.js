@@ -7,7 +7,7 @@ const mongoose = require('mongoose')
         required: true
     },
     duration: {
-        type: String,
+        type: [Number],
         required: true
     }
 

@@ -17,7 +17,10 @@ let patientSchema = new mongoose.Schema({
     birthDate: {
         type: Date
     },
-    relativesAddress: {
+    permanentResidence: {
+        type: String
+    },
+    addressOfRelativesAndFamily: {
         type: String
     },
     phoneNumbers: {
@@ -27,16 +30,13 @@ let patientSchema = new mongoose.Schema({
     medicalCardNumber: {
         type: Number
     },
-    note: {
-        type: String,
-    },
     workplace: {
         type: String
     },
     workPost: {
         type: String
     },
-    isActive: {
+    isDelete: {
         type: Boolean
     },
     gender: {
@@ -52,6 +52,10 @@ let patientSchema = new mongoose.Schema({
         type: String,
         select: false,
         required: true
+    },
+    rehabilitationCard: {
+        type: Schema.Types.ObjectId,
+        ref: 'RehabilitationCard'
     }
 });
 

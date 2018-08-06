@@ -2,6 +2,10 @@ const mongoose = require('mongoose')
     , Schema = mongoose.Schema;
 
 let employeeSchema = new Schema({
+    itemNo: {
+        type: Number,
+        required: true
+    },
     employmentDate: {
         type: Date,
         required: true,
@@ -37,11 +41,12 @@ let employeeSchema = new Schema({
         type: String
     },
     branch: {
-        type: String,
-        required: true
+        type: [Schema.Types.ObjectId],
+        ref: 'Branch'
     },
     reviews: {
-        type: [String]
+        type: [Schema.Types.ObjectId],
+        ref: 'Review'
     },
     post: {
         type: Schema.Types.ObjectId,
