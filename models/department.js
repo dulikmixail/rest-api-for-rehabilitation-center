@@ -10,3 +10,4 @@ let departmentSchema = new Schema({
 });
 
 let Department = mongoose.model('Department', departmentSchema);
+module.exports = require('./crud_model')(Department);

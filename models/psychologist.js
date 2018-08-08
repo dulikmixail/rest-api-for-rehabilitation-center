@@ -10,3 +10,4 @@ let psychologistSchema = new Schema({
 });
 
 let Psychologist = mongoose.model('Psychologist', psychologistSchema);
+module.exports = require('./crud_model')(Psychologist);

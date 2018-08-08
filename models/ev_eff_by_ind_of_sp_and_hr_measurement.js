@@ -29,3 +29,4 @@ let evEffByIndOfSpAndHrMeasurementSchema = new Schema({
 });
 
 let EvEffByIndOfSpAndHrMeasurement = mongoose.model('EvEffByIndOfSpAndHrMeasurement', evEffByIndOfSpAndHrMeasurementSchema);
+module.exports = require('./crud_model')(EvEffByIndOfSpAndHrMeasurement);

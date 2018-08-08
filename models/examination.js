@@ -18,3 +18,4 @@ let examinationSchema = new Schema({
 });
 
 let Examination = mongoose.model('Examination',examinationSchema);
+module.exports = require('./crud_model')(Examination);

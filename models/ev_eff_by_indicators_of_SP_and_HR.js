@@ -13,3 +13,4 @@ let evEffByIndicatorsOfSPAndHRSchema = new Schema({
 });
 
 let EvEffByIndicatorsOfSPAndHR = mongoose.model('EvEffByIndicatorsOfSPAndHR', evEffByIndicatorsOfSPAndHRSchema);
+module.exports = require('./crud_model')(EvEffByIndicatorsOfSPAndHR);

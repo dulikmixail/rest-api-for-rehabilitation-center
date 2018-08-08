@@ -13,3 +13,4 @@ let phRGroupSchema = new Schema({
 });
 
 let PhRGroup = mongoose.model('PhRGroup', phRGroupSchema);
+module.exports = require('./crud_model')(PhRGroup);

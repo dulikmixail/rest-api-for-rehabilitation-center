@@ -9,3 +9,4 @@ let diaryOfSelfControlSchema = new Schema({
 });
 
 let DiaryOfSelfControl = mongoose.model('DiaryOfSelfControl', diaryOfSelfControlSchema);
+module.exports = require('./crud_model')(DiaryOfSelfControl);

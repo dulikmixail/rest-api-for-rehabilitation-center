@@ -10,3 +10,4 @@ let nutritionistSchema = new Schema({
 });
 
 let Nutritionist = mongoose.model('Nutritionist', nutritionistSchema);
+module.exports = require('./crud_model')(Nutritionist);

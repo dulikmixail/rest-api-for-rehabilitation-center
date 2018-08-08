@@ -1,28 +1,49 @@
 const express = require('express');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/rc-bd', {useNewUrlParser: true});
-
+const config = require('config');
+const morgan = require('morgan');
+const app = express();
 const db = mongoose.connection;
+
+mongoose.connect(config.DBHost, {useNewUrlParser: true, keepAlive: 1, connectTimeoutMS: 30000});
+
+
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
-    console.log("Db connect")
+    console.log("Connect to DB " + config.DBHost + " SUCCESS")
     // we're connected!
 });
 
-const app = express();
+
 app.set('port', process.env.PORT || 3000);
+
+//не показывать логи в тестовом окружении
+if (config.util.getEnv('NODE_ENV') !== 'test') {
+    //morgan для вывода логов в консоль
+    app.use(morgan('combined')); //'combined' выводит логи в стиле apache
+}
+
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 
 const indexRouter = require('./routes/index');
-const employeeRouter = require('./routes/employee');
 const postRouter = require('./routes/post');
 
+function getRouters(){
+    let crudRouters = [
+        'branch', '/branches',
+        'employee', '/employees'];
+    let routers = [];
+    for (let i = 0; i < crudRouters.length; i += 2) {
+        routers.push(require('./routes/crud_router')(crudRouters[i], crudRouters[i + 1]))
+    }
+    return routers;
+}
 
 app.use('/', indexRouter);
-app.use('/api', employeeRouter, postRouter);
+app.use('/api', getRouters());
 
 
 //start server
@@ -30,3 +51,4 @@ app.listen(app.get('port'), () => {
     console.log('Server start localhost:' + app.get('port') + '. Go go next!')
 });
 
+module.exports = app; // for testing

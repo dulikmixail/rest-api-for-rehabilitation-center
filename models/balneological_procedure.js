@@ -10,3 +10,4 @@ let balneologicalProcedureSchema = new Schema({
 });
 
 let BalneologicalProcedure = mongoose.model('BalneologicalProcedure', balneologicalProcedureSchema);
+module.exports = require('./crud_model')(BalneologicalProcedure);

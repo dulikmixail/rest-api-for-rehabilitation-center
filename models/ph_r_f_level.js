@@ -17,3 +17,4 @@ let phRFLevelSchema = new Schema({
 });
 
 let PhRFLevel = mongoose.model('PhRFLevel', phRFLevelSchema);
+module.exports = require('./crud_model')(PhRFLevel);

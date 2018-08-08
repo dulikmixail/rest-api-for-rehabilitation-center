@@ -39,3 +39,4 @@ let rufyeMeasurementSchema = new Schema({
 
 
 let RufyeMeasurement = mongoose.model('RufyeMeasurement', rufyeMeasurementSchema);
+module.exports = require('./crud_model')(RufyeMeasurement);

@@ -18,3 +18,4 @@ let evEffKerdoIndexSchema = new Schema({
 
 
 let EvEffKerdoIndex = mongoose.model('EvEffKerdoIndex', evEffKerdoIndexSchema);
+module.exports = require('./crud_model')(EvEffKerdoIndex);

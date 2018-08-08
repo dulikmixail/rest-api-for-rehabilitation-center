@@ -10,3 +10,4 @@ let physiotherapyEquipmentSchema = new Schema({
 });
 
 let PhysiotherapyEquipment = mongoose.model('PhysiotherapyEquipment', physiotherapyEquipmentSchema);
+module.exports = require('./crud_model')(PhysiotherapyEquipment);

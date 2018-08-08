@@ -15,3 +15,4 @@ let mAllowedSchema = new Schema({
 });
 
 let MAllowed = mongoose.model('MAllowed', mAllowedSchema);
+module.exports = require('./crud_model')(MAllowed);

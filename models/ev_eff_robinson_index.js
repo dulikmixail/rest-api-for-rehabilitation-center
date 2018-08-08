@@ -18,3 +18,4 @@ let evEffRobinsonIndexSchema = new Schema({
 
 
 let EvEffRobinsonIndex = mongoose.model('EvEffRobinsonIndex', evEffRobinsonIndexSchema);
+module.exports = require('./crud_model')(EvEffRobinsonIndex);

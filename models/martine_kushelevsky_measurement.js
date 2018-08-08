@@ -33,3 +33,4 @@ let martineKushelevskyMeasurementSchema = new Schema({
 
 
 let MartineKushelevskyMeasurement = mongoose.model('MartineKushelevskyMeasurement', martineKushelevskyMeasurementSchema);
+module.exports = require('./crud_model')(MartineKushelevskyMeasurement);

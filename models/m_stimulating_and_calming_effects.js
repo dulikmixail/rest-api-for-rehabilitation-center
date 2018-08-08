@@ -38,3 +38,4 @@ let mStimulatingAndCalmingEffectsSchema = new Schema({
 });
 
 let MStimulatingAndCalmingEffects = mongoose.model('MStimulatingAndCalmingEffects', mStimulatingAndCalmingEffectsSchema);
+module.exports = require('./crud_model')(MStimulatingAndCalmingEffects);

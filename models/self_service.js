@@ -9,3 +9,4 @@ let selfServiceSchema = new Schema({
 });
 
 let SelfService = mongoose.model('SelfService', selfServiceSchema);
+module.exports = require('./crud_model')(SelfService);

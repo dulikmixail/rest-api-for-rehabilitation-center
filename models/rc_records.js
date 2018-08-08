@@ -40,3 +40,4 @@ let rCRecordsSchema = new Schema({
 });
 
 let RCRecords = mongoose.model('RCRecords', rCRecordsSchema);
+module.exports = require('./crud_model')(RCRecords);

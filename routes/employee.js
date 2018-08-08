@@ -5,30 +5,30 @@ const Employee = require('../models/employee');
 
 router.post('/employees', function (req, res) {
     Employee.create(req.body, function (err, result) {
-        err ? res.status(400).send(err) : res.send(result);
+        err || !result ? res.status(404).send(err) : res.send(result);
     })
 });
 router.post('/employees/filter', function (req, res) {
     Employee.find(req.body, function (err, result) {
-        err ? res.status(500).send(err) : res.send(result);
+        err || !result ? res.status(404).send(err) : res.send(result);
     })
 });
 
 router.get('/employees/filter', function (req, res) {
     Employee.find(req.query, function (err, result) {
-        err ? res.status(500).send(err) : res.send(result);
+        err || !result ? res.status(404).send(err) : res.send(result);
     })
 });
 
 router.get('/employees', function (req, res) {
     Employee.find({}, function (err, result) {
-        err ? res.status(500).send(err) : res.send(result);
+        err || !result ? res.status(404).send(err) : res.send(result);
     })
 });
 
 router.get('/employees/:id', function (req, res) {
     Employee.findById(req.params.id, function (err, result) {
-        err ? res.status(404).send({error: 'Entity not found'}) : res.send(result);
+        err || !result ? res.status(404).send({error: 'Entity not found'}) : res.send(result);
     })
 });
 

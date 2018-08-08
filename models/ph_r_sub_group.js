@@ -9,3 +9,4 @@ let phRSubGroupSchema = new Schema({
 });
 
 let PhRSubGroup = mongoose.model('PhRSubGroup', phRSubGroupSchema);
+module.exports = require('./crud_model')(PhRSubGroup);

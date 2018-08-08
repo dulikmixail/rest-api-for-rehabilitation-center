@@ -9,3 +9,4 @@ let psychologicalStatusSchema = new Schema({
 });
 
 let PsychologicalStatus = mongoose.model('PsychologicalStatus', psychologicalStatusSchema);
+module.exports = require('./crud_model')(PsychologicalStatus);

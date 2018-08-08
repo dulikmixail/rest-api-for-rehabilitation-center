@@ -11,3 +11,4 @@ let phRFLIExerciseSchema = new Schema({
 });
 
 let PhRFLIExercise = mongoose.model('PhRFLIExercise', phRFLIExerciseSchema);
+module.exports = require('./crud_model')(PhRFLIExercise);

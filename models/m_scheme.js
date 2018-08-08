@@ -9,3 +9,4 @@ let mSchemeSchema = new Schema({
 });
 
 let MScheme = mongoose.model('MScheme',mSchemeSchema);
+module.exports = require('./crud_model')(MScheme);

@@ -10,3 +10,4 @@ let branchSchema = new Schema({
 });
 
 let Branch = mongoose.model('Branch', branchSchema);
+module.exports = require('./crud_model')(Branch);

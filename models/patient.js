@@ -60,3 +60,4 @@ let patientSchema = new mongoose.Schema({
 });
 
 let Patient = mongoose.model('Patient', patientSchema);
+module.exports = require('./crud_model')(Patient);

@@ -18,3 +18,4 @@ let physicalRehabilitationSchema = new Schema({
 });
 
 let PhysicalRehabilitation = mongoose.model('PhysicalRehabilitation', physicalRehabilitationSchema);
+module.exports = require('./crud_model')(PhysicalRehabilitation);

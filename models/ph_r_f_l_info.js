@@ -18,3 +18,4 @@ let phRFLInfoSchema = new Schema({
 
 
 let PhRFLInfo = mongoose.model('PhRFLInfo',phRFLInfoSchema);
+module.exports = require('./crud_model')(PhRFLInfo);

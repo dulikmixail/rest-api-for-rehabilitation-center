@@ -24,3 +24,4 @@ let measurementSchema = new Schema({
 });
 
 let Measurement = mongoose.model('Measurement', measurementSchema);
+module.exports = require('./crud_model')(Measurement);

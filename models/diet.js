@@ -10,3 +10,4 @@ let dietSchema = new Schema({
 });
 
 let Diet = mongoose.model('Diet', dietSchema);
+module.exports = require('./crud_model')(Diet);

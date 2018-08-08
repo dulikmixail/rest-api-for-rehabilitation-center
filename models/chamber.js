@@ -10,3 +10,4 @@ let chamberSchema = new Schema({
 });
 
 let Сhamber = mongoose.model('Сhamber', chamberSchema);
+module.exports = require('./crud_model')(Сhamber);

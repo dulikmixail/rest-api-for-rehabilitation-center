@@ -12,3 +12,4 @@ let phRAllowedSchema = new Schema({
 });
 
 let PhRAllowed = mongoose.model('PhRAllowed', phRAllowedSchema);
+module.exports = require('./crud_model')(PhRAllowed);

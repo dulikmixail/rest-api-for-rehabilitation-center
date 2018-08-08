@@ -13,3 +13,4 @@ let phRFormSchema = new Schema({
 });
 
 let PhRForm = mongoose.model('PhRForm', phRFormSchema);
+module.exports = require('./crud_model')(PhRForm);

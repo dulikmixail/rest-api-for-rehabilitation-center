@@ -65,37 +65,4 @@ let employeeSchema = new Schema({
 });
 let Employee = mongoose.model('Employee', employeeSchema);
 
-//CRUD - Create Read Update Delete
-
-//Create
-module.exports.create = function (data, callback) {
-    Employee
-        .create(data, callback);
-};
-
-//Read
-module.exports.find = function (filter, callback) {
-    Employee
-        .find(filter, callback)
-        .populate('post');
-};
-
-module.exports.findById = function (id, callback) {
-    Employee
-        .findById(id, callback)
-        .populate('post');
-};
-
-//Update
-module.exports.update = function (filter, data, callback) {
-    Employee
-        .update(filter, data, callback)
-        .populate('post');
-};
-
-//Delete
-module.exports.delete = function (id, callback) {
-    Employee
-        .findByIdAndRemove(id, callback)
-        .populate('post');
-};
+module.exports = require('./crud_model')(Employee, ['post']);

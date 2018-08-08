@@ -47,3 +47,4 @@ let historyIncomingSchema = new Schema({
 });
 
 let HistoryIncoming = mongoose.model('HistoryIncoming',historyIncomingSchema);
+module.exports = require('./crud_model')(HistoryIncoming);

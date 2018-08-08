@@ -17,3 +17,4 @@ let mInfluenceOfIndividualMassageTechniquesSchema = new Schema({
 });
 
 let MInfluenceOfIndividualMassageTechniques = mongoose.model('MInfluenceOfIndividualMassageTechniques', mInfluenceOfIndividualMassageTechniquesSchema);
+module.exports = require('./crud_model')(MInfluenceOfIndividualMassageTechniques);

@@ -18,3 +18,4 @@ let reviewSchema = new Schema({
 });
 
 let Review = mongoose.model('Review', reviewSchema);
+module.exports = require('./crud_model')(Review);

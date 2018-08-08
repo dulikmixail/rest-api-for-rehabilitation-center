@@ -29,3 +29,4 @@ let evEffKIndMeasurementSchema = new Schema({
 });
 
 let EvEffKIndMeasurement = mongoose.model('EvEffKIndMeasurement', evEffKIndMeasurementSchema);
+module.exports = require('./crud_model')(EvEffKIndMeasurement);

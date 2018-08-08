@@ -18,3 +18,4 @@ let mDurationSchema = new Schema({
 
 
 let MDuration = mongoose.model('MDuration',mDurationSchema);
+module.exports = require('./crud_model')(MDuration);

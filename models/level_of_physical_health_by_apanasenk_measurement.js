@@ -42,3 +42,4 @@ let levelOfPhysicalHealthByApanasenkMeasurementSchema = new Schema({
 
 
 let LevelOfPhysicalHealthByApanasenkMeasurement = mongoose.model('LevelOfPhysicalHealthByApanasenkMeasurement', levelOfPhysicalHealthByApanasenkMeasurementSchema);
+module.exports = require('./crud_model')(LevelOfPhysicalHealthByApanasenkMeasurement);

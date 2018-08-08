@@ -8,3 +8,4 @@ let howIncomingSchema = new Schema({
 });
 
 let HowIncoming = mongoose.model('HowIncoming', howIncomingSchema);
+module.exports = require('./crud_model')(HowIncoming);

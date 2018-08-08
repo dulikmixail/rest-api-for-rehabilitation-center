@@ -9,3 +9,4 @@ let criterionSchema = new Schema({
 });
 
 let Criterion = mongoose.model('Criterion', criterionSchema);
+module.exports = require('./crud_model')(Criterion);

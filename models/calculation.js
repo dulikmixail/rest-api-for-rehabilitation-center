@@ -77,3 +77,4 @@ let CalculationSchema = new Schema({
 });
 
 let Calculation = mongoose.model('Calculation', CalculationSchema);
+module.exports = require('./crud_model')(Calculation);

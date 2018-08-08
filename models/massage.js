@@ -33,3 +33,4 @@ let massageSchema = new Schema({
 });
 
 let Massage = mongoose.model('Massage',massageSchema);
+module.exports = require('./crud_model')(Massage);
