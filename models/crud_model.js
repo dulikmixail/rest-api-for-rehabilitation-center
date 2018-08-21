@@ -25,9 +25,8 @@ module.exports = function (MongooseModel, populateFieldsName) {
         populate(MongooseModel.findByIdAndRemove(id, callback))
     };
 
-    exportObject.deleteAll = function (callback) {
-        MongooseModel
-            .remove({}, callback)
+    exportObject.deleteAll = function () {
+        MongooseModel.remove({},(err)=>{})
     };
 
     function populate(model) {

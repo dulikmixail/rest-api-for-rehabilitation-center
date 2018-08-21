@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 let modeOfMotorActivitySchema = new Schema({
     title: {
         type: String,
-        require: true
+        required: true
     }
 });
 

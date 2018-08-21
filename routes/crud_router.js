@@ -5,24 +5,24 @@ module.exports = function (searchModelName, routePath) {
     const MongooseModel = require('../models/' + searchModelName);
     router.post(routePath, function (req, res) {
         MongooseModel.create(req.body, function (err, result) {
-            err || !result ? res.status(404).send(err) : res.send(result);
+            err ? res.status(400).send(err) : res.send(result);
         })
     });
     router.post(routePath + '/filter', function (req, res) {
         MongooseModel.find(req.body, function (err, result) {
-            err || !result ? res.status(404).send(err) : res.send(result);
+            err ? res.status(404).send(err) : res.send(result);
         })
     });
 
     router.get(routePath + '/filter', function (req, res) {
         MongooseModel.find(req.query, function (err, result) {
-            err || !result ? res.status(404).send(err) : res.send(result);
+            err ? res.status(404).send(err) : res.send(result);
         })
     });
 
     router.get(routePath, function (req, res) {
         MongooseModel.find({}, function (err, result) {
-            err || result.length === 0 ? res.status(404).send(err) : res.send(result);
+            err ? res.status(404).send(err) : res.send(result);
         })
     });
 

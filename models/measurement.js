@@ -4,19 +4,19 @@ const mongoose = require('mongoose')
 let measurementSchema = new Schema({
     respiratoryRate: {
         type: String,
-        require: true
+        required: true
     },
     systolicPressure: {
         type: Number,
-        require: true
+        required: true
     },
     diastolicPressure: {
         type: Number,
-        require: true
+        required: true
     },
     heartRate: {
         type: Number,
-        require: true
+        required: true
     },
     signsOfFatigue:{
         type: String

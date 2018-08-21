@@ -7,22 +7,22 @@ let rCRecordsSchema = new Schema({
         required: true
     },
     program: {
-        type: [mongoose.Types.ObjectId],
+        type: [Schema.Types.ObjectId],
         ref: 'PhysicalRehabilitation'
     },
     complaints: {
         type: [String]
     },
     alterLoad: {
-        type: [mongoose.Types.ObjectId],
+        type: [Schema.Types.ObjectId],
         ref: 'Measurement'
     },
     beforeLoad: {
-        type: [mongoose.Types.ObjectId],
+        type: [Schema.Types.ObjectId],
         ref: 'Measurement'
     },
     afterSomeTime: {
-        type: [mongoose.Types.ObjectId],
+        type: [Schema.Types.ObjectId],
         ref: 'Measurement'
     },
     fullRestoreTime: {

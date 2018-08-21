@@ -3,17 +3,16 @@ const mongoose = require('mongoose')
 
 let phRFLInfoSchema = new Schema({
     title: {
-        type: String,
-        require: true
+        type: Schema.Types.ObjectId,
+        ref: 'PhRFLITitle',
+        required: true
     },
     value: {
-        type: String,
-        require:true
+        type: Schema.Types.ObjectId,
+        ref: 'PhRFLIValue',
+        required:true
     },
-    exercises: {
-        type: [mongoose.Types.ObjectId],
-        ref: 'PhRFLIExercise'
-    }
+
 });
 
 

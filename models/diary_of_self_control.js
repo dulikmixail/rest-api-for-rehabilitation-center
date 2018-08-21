@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 
 let diaryOfSelfControlSchema = new Schema({
     records: {
-        type: [mongoose.Types.ObjectId],
+        type: [Schema.Types.ObjectId],
         ref: 'RCRecords'
     },
 });

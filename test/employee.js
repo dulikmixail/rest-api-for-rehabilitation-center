@@ -11,9 +11,7 @@ chai.use(chaiHttp);
 
 describe('Employee', () => {
     beforeEach((done) => { //Перед каждым тестом чистим базу
-        Employee.deleteAll((err) => {
-            done();
-        })
+        Employee.deleteAll();
     });
 });
 /*

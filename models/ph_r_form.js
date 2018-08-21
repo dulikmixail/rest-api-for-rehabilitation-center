@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 let phRFormSchema = new Schema({
     title: {
         type: String,
-        require: true
+        required: true
     },
     level : {
         type: [Schema.Types.ObjectId],

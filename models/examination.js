@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 let examinationSchema = new Schema({
     title:{
         type: String,
-        require: true
+        required: true
     },
     report: {
       type: String

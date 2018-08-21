@@ -4,10 +4,10 @@ const mongoose = require('mongoose')
 let phRGroupSchema = new Schema({
     title: {
         type: String,
-        require: true
+        required: true
     },
     subGroup: {
-        type: Schema.Types.ObjectId,
+        type: [Schema.Types.ObjectId],
         ref: 'PhRSubGroup'
     }
 });

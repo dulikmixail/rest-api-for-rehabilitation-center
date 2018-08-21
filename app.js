@@ -11,6 +11,7 @@ mongoose.connect(config.DBHost, {useNewUrlParser: true, keepAlive: 1, connectTim
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
     console.log("Connect to DB " + config.DBHost + " SUCCESS")
+    require('./test_data/main');
     // we're connected!
 });
 
@@ -32,7 +33,9 @@ const indexRouter = require('./routes/index');
 const postRouter = require('./routes/post');
 
 function getRouters(){
+    // 'MongooseModel', '/RoutPath'
     let crudRouters = [
+        'assessment_of_functional_capability','/assessment_of_functional_capabilities',
         'branch', '/branches',
         'employee', '/employees'];
     let routers = [];
@@ -50,5 +53,6 @@ app.use('/api', getRouters());
 app.listen(app.get('port'), () => {
     console.log('Server start localhost:' + app.get('port') + '. Go go next!')
 });
+
 
 module.exports = app; // for testing

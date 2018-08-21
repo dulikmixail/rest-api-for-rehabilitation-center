@@ -4,10 +4,9 @@ const mongoose = require('mongoose')
 let assessmentOfFunctionalCapabilitySchema = new Schema({
     title: {
         type: String,
-        require: true
+        required: true
     }
 });
 
 let AssessmentOfFunctionalCapability = mongoose.model('AssessmentOfFunctionalCapability', assessmentOfFunctionalCapabilitySchema);
-
 module.exports = require('./crud_model')(AssessmentOfFunctionalCapability);

@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 let reviewSchema = new Schema({
     comment: {
         type: String,
-        require: true
+        required: true
     },
     mark: {
         type: Number,

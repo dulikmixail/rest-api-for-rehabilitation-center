@@ -4,15 +4,15 @@ const mongoose = require('mongoose')
 let mDurationSchema = new Schema({
     title: {
         type: String,
-        require: true
+        required: true
     },
     numberOfUnits:{
         type: Number,
-        require: true
+        required: true
     },
     minutes: {
         type: Number,
-        require: true
+        required: true
     }
 });
 

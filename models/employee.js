@@ -23,7 +23,6 @@ let employeeSchema = new Schema({
     },
     middleName: {
         type: String,
-        required: true
     },
     birthDate: {
         type: Date,
@@ -63,6 +62,6 @@ let employeeSchema = new Schema({
         required: true
     }
 });
-let Employee = mongoose.model('Employee', employeeSchema);
 
+let Employee = mongoose.model('Employee', employeeSchema);
 module.exports = require('./crud_model')(Employee, ['post']);
