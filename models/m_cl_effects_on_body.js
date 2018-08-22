@@ -8,5 +8,5 @@ let mClEffectsOnBodySchema = new Schema({
     }
 });
 
-let MClEffectsOnBody = mongoose.model('MClEffectsOnBody', mClEffectsOnBodySchema);
+let MClEffectsOnBody = mongoose.model('M_Cl_Effects_On_Body', mClEffectsOnBodySchema);
 module.exports = require('./crud_model')(MClEffectsOnBody);

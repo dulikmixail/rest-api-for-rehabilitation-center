@@ -49,5 +49,5 @@ let korsZaKlapchukaMeasurementSchema = new Schema({
 });
 
 
-let KorsZaKlapchukaMeasurement = mongoose.model('KorsZaKlapchukaMeasurement', korsZaKlapchukaMeasurementSchema);
+let KorsZaKlapchukaMeasurement = mongoose.model('Kors_Za_Klapchuka_Measurement', korsZaKlapchukaMeasurementSchema);
 module.exports = require('./crud_model')(KorsZaKlapchukaMeasurement);

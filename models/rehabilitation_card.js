@@ -4,9 +4,9 @@ const mongoose = require('mongoose')
 let rehabilitationCardSchema = new Schema({
     records: {
         type: [Schema.Types.ObjectId],
-        ref: 'RCRecords'
+        ref: 'RC_Records'
     },
 });
 
-let RehabilitationCard = mongoose.model('RehabilitationCard', rehabilitationCardSchema);
+let RehabilitationCard = mongoose.model('Rehabilitation_Card', rehabilitationCardSchema);
 module.exports = require('./crud_model')(RehabilitationCard);

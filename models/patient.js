@@ -55,7 +55,7 @@ let patientSchema = new mongoose.Schema({
     },
     rehabilitationCard: {
         type: Schema.Types.ObjectId,
-        ref: 'RehabilitationCard'
+        ref: 'Rehabilitation_Card'
     }
 });
 

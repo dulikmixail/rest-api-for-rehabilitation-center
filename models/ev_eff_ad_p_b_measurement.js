@@ -47,5 +47,5 @@ let evEffAdPBMeasurementSchema = new Schema({
     }
 });
 
-let EvEffAdPBMeasurement = mongoose.model('EvEffAdPBMeasurement', evEffAdPBMeasurementSchema);
+let EvEffAdPBMeasurement = mongoose.model('Ev_Eff_Ad_P_B_Measurement', evEffAdPBMeasurementSchema);
 module.exports = require('./crud_model')(EvEffAdPBMeasurement);

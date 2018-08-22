@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
     , Schema = mongoose.Schema;
 
-let evEffRIndMeasurementSchema = new Schema({
+let evEffOrthTMeasurementSchema = new Schema({
     typeOfLoad: {
         type: String
     },
@@ -28,5 +28,5 @@ let evEffRIndMeasurementSchema = new Schema({
     }
 });
 
-let EvEffRIndMeasurement = mongoose.model('EvEffRIndMeasurement', evEffRIndMeasurementSchema);
-module.exports = require('./crud_model')(EvEffRIndMeasurement);
+let EvEffOrthTMeasurement = mongoose.model('Ev_Eff_Orth_T_Measurement', evEffOrthTMeasurementSchema);
+module.exports = require('./crud_model')(EvEffOrthTMeasurement);

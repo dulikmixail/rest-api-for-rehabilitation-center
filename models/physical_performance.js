@@ -29,5 +29,5 @@ let physicalPerformanceSchema = new Schema({
 });
 
 
-let PhysicalPerformance = mongoose.model('PhysicalPerformance', physicalPerformanceSchema);
+let PhysicalPerformance = mongoose.model('Physical_Performance', physicalPerformanceSchema);
 module.exports = require('./crud_model')(PhysicalPerformance);

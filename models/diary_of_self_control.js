@@ -4,9 +4,9 @@ const mongoose = require('mongoose')
 let diaryOfSelfControlSchema = new Schema({
     records: {
         type: [Schema.Types.ObjectId],
-        ref: 'RCRecords'
+        ref: 'RC_Records'
     },
 });
 
-let DiaryOfSelfControl = mongoose.model('DiaryOfSelfControl', diaryOfSelfControlSchema);
+let DiaryOfSelfControl = mongoose.model('Diary_Of_Self_Control', diaryOfSelfControlSchema);
 module.exports = require('./crud_model')(DiaryOfSelfControl);

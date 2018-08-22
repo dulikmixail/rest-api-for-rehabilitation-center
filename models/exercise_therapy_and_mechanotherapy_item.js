@@ -19,5 +19,5 @@ let exerciseTherapyAndMechanotherapyItemSchema = new Schema({
 
 });
 
-let ExerciseTherapyAndMechanotherapyItem = mongoose.model('ExerciseTherapyAndMechanotherapyItem', exerciseTherapyAndMechanotherapyItemSchema);
+let ExerciseTherapyAndMechanotherapyItem = mongoose.model('Exercise_Therapy_And_Mechanotherapy_Item', exerciseTherapyAndMechanotherapyItemSchema);
 module.exports = require('./crud_model')(ExerciseTherapyAndMechanotherapyItem);

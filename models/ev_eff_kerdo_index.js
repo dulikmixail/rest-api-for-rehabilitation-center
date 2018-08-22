@@ -17,5 +17,5 @@ let evEffKerdoIndexSchema = new Schema({
 });
 
 
-let EvEffKerdoIndex = mongoose.model('EvEffKerdoIndex', evEffKerdoIndexSchema);
+let EvEffKerdoIndex = mongoose.model('Ev_Eff_Kerdo_Index', evEffKerdoIndexSchema);
 module.exports = require('./crud_model')(EvEffKerdoIndex);

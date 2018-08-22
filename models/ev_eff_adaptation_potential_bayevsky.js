@@ -4,17 +4,17 @@ const mongoose = require('mongoose')
 let evEffAdaptationPotentialBayevskySchema = new Schema({
     after: {
         type: Schema.Types.ObjectId,
-        ref: 'EvEffAdPBMeasurement'
+        ref: 'Ev_Eff_Ad_P_B_Measurement'
     },
     before: {
         type: Schema.Types.ObjectId,
-        ref: 'EvEffAdPBMeasurement'
+        ref: 'Ev_Eff_Ad_P_B_Measurement'
     },
     afterSomeTime: {
         type: Schema.Types.ObjectId,
-        ref: 'EvEffAdPBMeasurement'
+        ref: 'Ev_Eff_Ad_P_B_Measurement'
     }
 });
 
-let EvEffAdaptationPotentialBayevsky = mongoose.model('EvEffAdaptationPotentialBayevsky', evEffAdaptationPotentialBayevskySchema);
+let EvEffAdaptationPotentialBayevsky = mongoose.model('Ev_Eff_Adaptation_Potential_Bayevsky', evEffAdaptationPotentialBayevskySchema);
 module.exports = require('./crud_model')(EvEffAdaptationPotentialBayevsky);

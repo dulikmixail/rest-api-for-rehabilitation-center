@@ -8,7 +8,7 @@ let rCRecordsSchema = new Schema({
     },
     program: {
         type: [Schema.Types.ObjectId],
-        ref: 'PhysicalRehabilitation'
+        ref: 'Physical_Rehabilitation'
     },
     complaints: {
         type: [String]
@@ -39,5 +39,5 @@ let rCRecordsSchema = new Schema({
     }
 });
 
-let RCRecords = mongoose.model('RCRecords', rCRecordsSchema);
+let RCRecords = mongoose.model('RC_Records', rCRecordsSchema);
 module.exports = require('./crud_model')(RCRecords);

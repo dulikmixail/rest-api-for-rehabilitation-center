@@ -7,5 +7,5 @@ let typeIncomingSchema = new Schema({
     }
 });
 
-let TypeIncoming = mongoose.model('TypeIncoming', typeIncomingSchema);
+let TypeIncoming = mongoose.model('Type_Incoming', typeIncomingSchema);
 module.exports = require('./crud_model')(TypeIncoming);

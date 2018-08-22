@@ -27,7 +27,7 @@ let historyIncomingSchema = new Schema({
     },
     typeIncoming: {
         type: Schema.Types.ObjectId,
-        ref: 'TypeIncoming',
+        ref: 'Type_Incoming',
     },
     department: {
         type: Schema.Types.ObjectId,
@@ -46,5 +46,5 @@ let historyIncomingSchema = new Schema({
     }
 });
 
-let HistoryIncoming = mongoose.model('HistoryIncoming',historyIncomingSchema);
+let HistoryIncoming = mongoose.model('History_Incoming',historyIncomingSchema);
 module.exports = require('./crud_model')(HistoryIncoming);

@@ -8,5 +8,5 @@ let mClWorkerSchema = new Schema({
     }
 });
 
-let MClWorker = mongoose.model('MClWorker', mClWorkerSchema);
+let MClWorker = mongoose.model('M_Cl_Worker', mClWorkerSchema);
 module.exports = require('./crud_model')(MClWorker);

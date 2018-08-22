@@ -4,31 +4,31 @@ const mongoose = require('mongoose')
 let massageSchema = new Schema({
     allowed: {
         type: Schema.Types.ObjectId,
-        ref: 'MAllowed'
+        ref: 'M_Allowed'
     },
     classifier: {
         type: Schema.Types.ObjectId,
-        ref: 'MClassifier'
+        ref: 'M_Classifier'
     },
     duration: {
         type: [Schema.Types.ObjectId],
-        ref: 'MDuration'
+        ref: 'M_Duration'
     },
     treatment: {
         type: Schema.Types.ObjectId,
-        ref: 'MTreatment'
+        ref: 'M_Treatment'
     },
     influenceOfIndividualMassageTechniques: {
         type: Schema.Types.ObjectId,
-        ref: 'MInfluenceOfIndividualMassageTechniques'
+        ref: 'M_Influence_Of_Individual_Massage_Techniques'
     },
     stimulatingAndCalmingEffects:{
         type: Schema.Types.ObjectId,
-        ref: 'MStimulatingAndCalmingEffects'
+        ref: 'M_Stimulating_And_Calming_Effects'
     },
     scheme: {
         type: Schema.Types.ObjectId,
-        ref: 'MScheme'
+        ref: 'M_Scheme'
     }
 });
 

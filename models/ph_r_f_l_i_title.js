@@ -9,5 +9,5 @@ let phRFLITitleSchema = new Schema({
 });
 
 
-let PhRFLITitle = mongoose.model('PhRFLITitle',phRFLITitleSchema);
+let PhRFLITitle = mongoose.model('Ph_R_F_L_I_Title',phRFLITitleSchema);
 module.exports = require('./crud_model')(PhRFLITitle);

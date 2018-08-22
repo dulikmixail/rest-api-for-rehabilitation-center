@@ -56,7 +56,9 @@ Promise
             } else {
                 PhRFLITitleAndValues.create({
                     title: res,
-                    value: newValue[0]
+                    values: newValue
+                }, err => {
+                    if (err) throw (err)
                 })
             }
         })

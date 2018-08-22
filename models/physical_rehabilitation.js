@@ -5,17 +5,17 @@ const mongoose = require('mongoose')
 let physicalRehabilitationSchema = new Schema({
     group: {
         type: Schema.Types.ObjectId,
-        ref: 'PhRGroup'
+        ref: 'Ph_R_Group'
     },
     forms: {
         type: [Schema.Types.ObjectId],
-        ref: 'PhRForm'
+        ref: 'Ph_R_Form'
     },
     allowed: {
         type: Schema.Types.ObjectId,
-        ref: 'PhRAllowed'
+        ref: 'Ph_R_Allowed'
     }
 });
 
-let PhysicalRehabilitation = mongoose.model('PhysicalRehabilitation', physicalRehabilitationSchema);
+let PhysicalRehabilitation = mongoose.model('Physical_Rehabilitation', physicalRehabilitationSchema);
 module.exports = require('./crud_model')(PhysicalRehabilitation);

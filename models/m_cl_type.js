@@ -8,5 +8,5 @@ let mClTypeSchema = new Schema({
     }
 });
 
-let MClType = mongoose.model('MClType', mClTypeSchema);
+let MClType = mongoose.model('M_Cl_Type', mClTypeSchema);
 module.exports = require('./crud_model')(MClType);

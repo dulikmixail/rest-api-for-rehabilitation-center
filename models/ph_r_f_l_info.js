@@ -4,17 +4,17 @@ const mongoose = require('mongoose')
 let phRFLInfoSchema = new Schema({
     title: {
         type: Schema.Types.ObjectId,
-        ref: 'PhRFLITitle',
+        ref: 'Ph_R_F_L_I_Title',
         required: true
     },
     value: {
         type: Schema.Types.ObjectId,
-        ref: 'PhRFLIValue',
+        ref: 'Ph_R_F_L_I_Value',
         required:true
     },
 
 });
 
 
-let PhRFLInfo = mongoose.model('PhRFLInfo',phRFLInfoSchema);
+let PhRFLInfo = mongoose.model('Ph_R_F_L_Info',phRFLInfoSchema);
 module.exports = require('./crud_model')(PhRFLInfo);

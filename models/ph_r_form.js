@@ -8,9 +8,9 @@ let phRFormSchema = new Schema({
     },
     level : {
         type: [Schema.Types.ObjectId],
-        ref: 'PhRFLevel'
+        ref: 'Ph_R_F_Level'
     }
 });
 
-let PhRForm = mongoose.model('PhRForm', phRFormSchema);
+let PhRForm = mongoose.model('Ph_R_Form', phRFormSchema);
 module.exports = require('./crud_model')(PhRForm);

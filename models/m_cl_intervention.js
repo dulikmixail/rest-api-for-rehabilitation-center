@@ -8,5 +8,5 @@ let mClInterventionSchema = new Schema({
     }
 });
 
-let MClIntervention = mongoose.model('MClIntervention', mClInterventionSchema);
+let MClIntervention = mongoose.model('M_Cl_Intervention', mClInterventionSchema);
 module.exports = require('./crud_model')(MClIntervention);

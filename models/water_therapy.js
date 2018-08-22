@@ -9,5 +9,5 @@ let waterTherapySchema = new Schema({
     }
 });
 
-let WaterTherapy = mongoose.model('WaterTherapy', waterTherapySchema);
+let WaterTherapy = mongoose.model('Water_Therapy', waterTherapySchema);
 module.exports = require('./crud_model')(WaterTherapy);

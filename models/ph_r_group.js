@@ -8,9 +8,9 @@ let phRGroupSchema = new Schema({
     },
     subGroup: {
         type: [Schema.Types.ObjectId],
-        ref: 'PhRSubGroup'
+        ref: 'Ph_R_Sub_Group'
     }
 });
 
-let PhRGroup = mongoose.model('PhRGroup', phRGroupSchema);
+let PhRGroup = mongoose.model('Ph_R_Group', phRGroupSchema);
 module.exports = require('./crud_model')(PhRGroup);

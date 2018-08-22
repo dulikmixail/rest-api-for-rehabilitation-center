@@ -8,5 +8,5 @@ let mClAppointmentSchema = new Schema({
     }
 });
 
-let MClAppointment = mongoose.model('MClAppointment', mClAppointmentSchema);
+let MClAppointment = mongoose.model('M_Cl_Appointment', mClAppointmentSchema);
 module.exports = require('./crud_model')(MClAppointment);
