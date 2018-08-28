@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Employee = require('../models/employee');
+const Employee = require('../models/all/employee');
 
 router.post('/employees', function (req, res) {
     Employee.create(req.body, function (err, result) {

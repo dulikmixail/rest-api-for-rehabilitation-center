@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 module.exports = function (searchModelName, routePath) {
-    const MongooseModel = require('../models/' + searchModelName);
+    const MongooseModel = require('../models/all/' + searchModelName);
     router.post(routePath, function (req, res) {
         MongooseModel.create(req.body, function (err, result) {
             err ? res.status(400).send(err) : res.send(result);

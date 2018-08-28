@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Branch = require('../models/branch');
+const Branch = require('../models/all/branch');
 
 router.post('/branches', function (req, res) {
     Branch.create(req.body, function (err, result) {

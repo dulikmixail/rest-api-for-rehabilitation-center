@@ -1,7 +1,7 @@
 //During the test the env variable is set to test
 process.env.NODE_ENV = 'test';
 
-const Employee = require('../models/employee');
+const Employee = require('../models/all/employee');
 const app = require('../app');
 const chai = require('chai');
 const chaiHttp = require('chai-http');
