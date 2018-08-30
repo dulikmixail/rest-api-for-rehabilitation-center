@@ -36,7 +36,12 @@ let rCRecordsSchema = new Schema({
     },
     conclusion: {
         type: String
-    }
+    },
+    contraindications: {
+        type: [Schema.Types.ObjectId],
+        ref: 'Contraindications'
+    },
+
 });
 
 let RCRecords = mongoose.model('RC_Records', rCRecordsSchema);

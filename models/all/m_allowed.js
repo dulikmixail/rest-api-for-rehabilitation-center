@@ -7,9 +7,9 @@ let mAllowedSchema = new Schema({
         ref: 'M_Allowed_Level',
         required: true
     },
-    description: {
+    contraindications: {
         type: Schema.Types.ObjectId,
-        ref: 'M_Classifier',
+        ref: 'M_Allowed_Contraindications',
         required: true
     }
 });

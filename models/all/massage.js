@@ -2,10 +2,6 @@ const mongoose = require('mongoose')
     , Schema = mongoose.Schema;
 
 let massageSchema = new Schema({
-    allowed: {
-        type: Schema.Types.ObjectId,
-        ref: 'M_Allowed'
-    },
     classifier: {
         type: Schema.Types.ObjectId,
         ref: 'M_Classifier'

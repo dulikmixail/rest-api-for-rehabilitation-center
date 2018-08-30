@@ -53,10 +53,6 @@ let patientSchema = new mongoose.Schema({
         select: false,
         required: true
     },
-    rehabilitationCard: {
-        type: Schema.Types.ObjectId,
-        ref: 'Rehabilitation_Card'
-    }
 });
 
 let Patient = mongoose.model('Patient', patientSchema);
