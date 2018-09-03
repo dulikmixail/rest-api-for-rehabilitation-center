@@ -1,6 +1,6 @@
-const ModeOfMotorActivity = require('../../models/all/mode_of_motor_activity');
+const Mode_Of_Motor_Activity = require('../../models/all/mode_of_motor_activity');
 
-ModeOfMotorActivity.create([
+Mode_Of_Motor_Activity.create([
     {title: 'Щадний'},
     {title: 'Щадно-тренувальний'},
     {title: 'Тренувальний'},

@@ -7,5 +7,5 @@ let howIncomingSchema = new Schema({
     }
 });
 
-let HowIncoming = mongoose.model('HowIncoming', howIncomingSchema);
-module.exports = require('../crud_model')(HowIncoming);
+let How_Incoming = mongoose.model('How_Incoming', howIncomingSchema);
+module.exports = require('../crud_model')(How_Incoming);

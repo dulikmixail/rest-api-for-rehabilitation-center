@@ -1,4 +1,4 @@
-const PhRFLIValue = require('../../models/all/ph_r_f_l_i_value');
+const Ph_R_F_L_I_Value = require('../../models/all/ph_r_f_l_i_value');
 
 let arr = [
     {title: 'не показаний'},
@@ -158,7 +158,7 @@ let arr = [
 ];
 
 module.exports = new Promise((resolve, reject) => {
-    PhRFLIValue.create(arr, (err, res) => {
+    Ph_R_F_L_I_Value.create(arr, (err, res) => {
         if (err) {
             reject(err)
         } else {

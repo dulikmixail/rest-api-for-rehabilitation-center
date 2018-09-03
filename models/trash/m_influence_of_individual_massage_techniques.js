@@ -16,5 +16,5 @@ let mInfluenceOfIndividualMassageTechniquesSchema = new Schema({
     }
 });
 
-let MInfluenceOfIndividualMassageTechniques = mongoose.model('M_Influence_Of_Individual_Massage_Techniques', mInfluenceOfIndividualMassageTechniquesSchema);
-module.exports = require('../crud_model')(MInfluenceOfIndividualMassageTechniques);
+let M_Influence_Of_Individual_Massage_Techniques = mongoose.model('M_Influence_Of_Individual_Massage_Techniques', mInfluenceOfIndividualMassageTechniquesSchema);
+module.exports = require('../crud_model')(M_Influence_Of_Individual_Massage_Techniques);

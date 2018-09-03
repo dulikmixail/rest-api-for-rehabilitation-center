@@ -8,5 +8,5 @@ let assessmentOfFunctionalCapabilitySchema = new Schema({
     }
 });
 
-let AssessmentOfFunctionalCapability = mongoose.model('Assessment_Of_Functional_Capability', assessmentOfFunctionalCapabilitySchema);
-module.exports = require('../crud_model')(AssessmentOfFunctionalCapability);
+let Assessment_Of_Functional_Capability = mongoose.model('Assessment_Of_Functional_Capability', assessmentOfFunctionalCapabilitySchema);
+module.exports = require('../crud_model')(Assessment_Of_Functional_Capability);

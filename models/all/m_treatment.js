@@ -13,5 +13,5 @@ const mongoose = require('mongoose')
 
 });
 
-let MTreatment = mongoose.model('M_Treatment', mTreatmentSchema);
-module.exports = require('../crud_model')(MTreatment);
+let M_Treatment = mongoose.model('M_Treatment', mTreatmentSchema);
+module.exports = require('../crud_model')(M_Treatment);

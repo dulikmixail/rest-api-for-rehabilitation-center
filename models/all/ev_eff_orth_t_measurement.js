@@ -28,5 +28,5 @@ let evEffOrthTMeasurementSchema = new Schema({
     }
 });
 
-let EvEffOrthTMeasurement = mongoose.model('Ev_Eff_Orth_T_Measurement', evEffOrthTMeasurementSchema);
-module.exports = require('../crud_model')(EvEffOrthTMeasurement);
+let Ev_Eff_Orth_T_Measurement = mongoose.model('Ev_Eff_Orth_T_Measurement', evEffOrthTMeasurementSchema);
+module.exports = require('../crud_model')(Ev_Eff_Orth_T_Measurement);

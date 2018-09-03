@@ -1,19 +1,19 @@
-const PhRFLITitleAndValues = require('../../models/all/ph_r_f_l_i_title_and_values');
-const PhRFLIValue = require('../../models/all/ph_r_f_l_i_value');
-const PhRFLITitle = require('../../models/all/ph_r_f_l_i_title');
+const Ph_R_F_L_I_Title_And_Values = require('../../models/all/ph_r_f_l_i_title_and_values');
+const Ph_R_F_L_I_Value = require('../../models/all/ph_r_f_l_i_value');
+const Ph_R_F_L_I_Title = require('../../models/all/ph_r_f_l_i_title');
 const PromiseHelper = require('../promise_helper/index');
 
-let oneToMany = function (modelOne, valueOne, modelMany, valuesMany) {
+let oneToMany = function (valueOne, valuesMany) {
     Promise
         .all(
-            PromiseHelper.getManyFindModel(modelMany, valuesMany)
+            PromiseHelper.getManyFindModel(Ph_R_F_L_I_Value, valuesMany)
         )
         .then(results => {
-            modelOne.find(valueOne, (err, res) => {
+            Ph_R_F_L_I_Title.find(valueOne, (err, res) => {
                 if (err) {
                     throw (err)
                 } else {
-                    PhRFLITitleAndValues.create({
+                    Ph_R_F_L_I_Title_And_Values.create({
                         title: res[0],
                         values: PromiseHelper.joinAllResults(results)
                     }, err => {
@@ -25,9 +25,7 @@ let oneToMany = function (modelOne, valueOne, modelMany, valuesMany) {
 };
 
 oneToMany(
-    PhRFLITitle,
     {title: 'Тривалість'},
-    PhRFLIValue,
     [
         {title: 'не показаний'},
         {title: '6-15 хв'},
@@ -43,9 +41,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Темп'},
-    PhRFLIValue,
     [
         {title: 'не показаний'},
         {title: '2 м/сек (140 кр/хв)'},
@@ -61,18 +57,14 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Режим'},
-    PhRFLIValue,
     [
         {title: 'не показаний'},
         {title: 'інтервальний'},
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Види'},
-    PhRFLIValue,
     [
         {title: 'Кегельбан, крокет, кільцекид'},
         {title: 'наст. теніс, волейбол, бадмінтон'},
@@ -80,9 +72,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Температура'},
-    PhRFLIValue,
     [
         {title: '19-20͒° С'},
         {title: 'не нижче 20° С'},
@@ -90,9 +80,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Холодове навантаження'},
-    PhRFLIValue,
     [
         {title: 'Слабка (20-25 ккал)'},
         {title: 'Середня (30-35 ккал)'},
@@ -102,9 +90,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Середня експозиція'},
-    PhRFLIValue,
     [
         {title: 'Від 15-20 до 30-80 хв'},
         {title: 'Від 20 хв до 1,5 години'},
@@ -117,9 +103,7 @@ oneToMany(
 );
 
 oneToMany(
-    PhRFLITitle,
     {title: 'Температура води'},
-    PhRFLIValue,
     [
         {title: '>20͒° С'},
         {title: '>19° С'},
@@ -128,9 +112,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Темп плавання'},
-    PhRFLIValue,
     [
         {title: 'повільний'},
         {title: 'Повільний і середній'},
@@ -139,9 +121,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Інтенсивність'},
-    PhRFLIValue,
     [
         {title: 'РЭЭТ=18-29 С 5-20 кал 1/4-1 біодоза'},
         {title: 'РЭЭТ=18-29 С 10-40 кал 1/2-2,5 біодоза'},
@@ -154,18 +134,14 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Час доби'},
-    PhRFLIValue,
     [
         {title: 'Ранок'},
         {title: 'Окрім 12-15 година'},
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Метод проведення'},
-    PhRFLIValue,
     [
         {title: 'Індивідуальний'},
         {title: 'Індивідуальний,  малогруповий'},
@@ -173,9 +149,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Місце проведення'},
-    PhRFLIValue,
     [
         {title: 'Палата (на ліжку)'},
         {title: 'Палата'},
@@ -183,17 +157,13 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Час проведення'},
-    PhRFLIValue,
     [
         {title: 'Ранок'},
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Вихідне положення'},
-    PhRFLIValue,
     [
         {title: 'лежачи'},
         {title: 'лежачи, сидячи'},
@@ -201,9 +171,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Кількість вправ'},
-    PhRFLIValue,
     [
         {title: '4'},
         {title: '6'},
@@ -215,9 +183,7 @@ oneToMany(
 );
 
 oneToMany(
-    PhRFLITitle,
     {title: 'Кількість повторень вправ'},
-    PhRFLIValue,
     [
         {title: '4-6'},
         {title: '6'},
@@ -225,9 +191,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Складність рухів'},
-    PhRFLIValue,
     [
         {title: 'В одній площині.Дрібні суглоби та м’язові групи'},
         {title: 'В одній площині послідовно.Дрібні та середні суглоби та м’язові групи'},
@@ -236,26 +200,20 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Контроль'},
-    PhRFLIValue,
     [
         {title: 'Самоконтроль. Медична сестра'},
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Співвідношення загально-зміцнювальних та дихальних вправ'},
-    PhRFLIValue,
     [
         {title: '2:1'},
         {title: '1:1'},
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Ступінь силового зусилля'},
-    PhRFLIValue,
     [
         {title: 'М’язи розслаблені'},
         {title: 'Без силового зусилля'},
@@ -265,9 +223,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Максимально допустиме зростання ЧСС'},
-    PhRFLIValue,
     [
         {title: 'до +24(до 30%)'},
         {title: 'до +4(до 5%)'},
@@ -278,9 +234,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Амплітуда'},
-    PhRFLIValue,
     [
         {title: 'обмежена'},
         {title: 'середня'},
@@ -288,9 +242,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Моторна щільність'},
-    PhRFLIValue,
     [
         {title: '35 - 45 %'},
         {title: '45 - 50 %'},
@@ -298,9 +250,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Співвідношення загально-зміцнювальних до спеціальних вправ'},
-    PhRFLIValue,
     [
         {title: '3:1'},
         {title: '2:1'},
@@ -308,9 +258,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Види вправ'},
-    PhRFLIValue,
     [
         {title: 'Дихальні'},
         {title: 'Загальнофізичні до 16 вправ'},
@@ -322,9 +270,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Відстань'},
-    PhRFLIValue,
     [
         {title: '2-3 км'},
         {title: '5 км'},
@@ -340,9 +286,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Швидкість'},
-    PhRFLIValue,
     [
         {title: '3-5 км/год (80-90 кр/хв)'},
         {title: '4-5 км/год (80-90 кр/хв)'},
@@ -351,18 +295,14 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Характер місцевості'},
-    PhRFLIValue,
     [
         {title: 'Рівна'},
         {title: 'Пересічна'},
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Кут підйому'},
-    PhRFLIValue,
     [
         {title: 'до 5'},
         {title: '5 - 10'},
@@ -371,18 +311,14 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Характер, навантаження'},
-    PhRFLIValue,
     [
         {title: 'Через кожні 4 дні збільшення'},
         {title: 'Поступовий'},
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Частота'},
-    PhRFLIValue,
     [
         {title: 'не показаний'},
         {title: '1-2 раз/тиждень'},
@@ -391,9 +327,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Висота'},
-    PhRFLIValue,
     [
         {title: 'не показаний'},
         {title: 'до 600 - 800 м'},
@@ -401,9 +335,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Енерговитрати'},
-    PhRFLIValue,
     [
         {title: '100 ккал'},
         {title: '150 - 200 ккал'},
@@ -412,9 +344,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Належне максимальне споживання O2'},
-    PhRFLIValue,
     [
         {title: '25%'},
         {title: '26 - 39 %'},
@@ -423,9 +353,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Енергетичний рівень'},
-    PhRFLIValue,
     [
         {title: '2,5 ккал/хв'},
         {title: '2,5 4 ккал/хв'},
@@ -434,9 +362,7 @@ oneToMany(
     ]
 );
 oneToMany(
-    PhRFLITitle,
     {title: 'Граничний вік'},
-    PhRFLIValue,
     [
         {title: 'Чоловіки - 65р., Жінки - 60р'},
         {title: 'Чоловіки - 75 р., Жінки - 70р'},

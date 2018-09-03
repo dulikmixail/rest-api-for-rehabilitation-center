@@ -8,5 +8,5 @@ let mAllowedLevelSchema = new Schema({
     }
 });
 
-let MAllowedLevel = mongoose.model('M_Allowed_Level', mAllowedLevelSchema);
-module.exports = require('../crud_model')(MAllowedLevel);
+let M_Allowed_Level = mongoose.model('M_Allowed_Level', mAllowedLevelSchema);
+module.exports = require('../crud_model')(M_Allowed_Level);

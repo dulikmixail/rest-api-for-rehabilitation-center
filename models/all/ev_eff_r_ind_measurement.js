@@ -28,5 +28,5 @@ let evEffRIndMeasurementSchema = new Schema({
     }
 });
 
-let EvEffRIndMeasurement = mongoose.model('Ev_Eff_R_Ind_Measurement', evEffRIndMeasurementSchema);
-module.exports = require('../crud_model')(EvEffRIndMeasurement);
+let Ev_Eff_R_Ind_Measurement = mongoose.model('Ev_Eff_R_Ind_Measurement', evEffRIndMeasurementSchema);
+module.exports = require('../crud_model')(Ev_Eff_R_Ind_Measurement);

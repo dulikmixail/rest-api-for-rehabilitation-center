@@ -11,7 +11,7 @@ mongoose.connect(config.DBHost, {useNewUrlParser: true, keepAlive: 1, connectTim
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
     console.log("Connect to DB " + config.DBHost + " SUCCESS")
-    require('./test_data');
+    require('./init_data');
     // we're connected!
 });
 

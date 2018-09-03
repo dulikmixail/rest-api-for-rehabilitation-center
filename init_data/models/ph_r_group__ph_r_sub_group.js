@@ -1,7 +1,7 @@
-const PhRSubGroup = require('../../models/all/ph_r_sub_group');
-const PhRGroup = require('../../models/all/ph_r_group');
+const Ph_R_Sub_Group = require('../../models/all/ph_r_sub_group');
+const Ph_R_Group = require('../../models/all/ph_r_group');
 
-PhRSubGroup.create(
+Ph_R_Sub_Group.create(
     [
         {title: 'ТГ. Порушення мінеральної щільності кісткової тканини (МЩКТ), остеопороз'},
         {title: 'ТГ. Перенесений гострий первинний або повторний інфаркт міокарда'},
@@ -16,7 +16,7 @@ PhRSubGroup.create(
         {title: 'ТГ. Захворювання суглобів'}
     ],
     (err, res) => {
-        PhRGroup.create(
+        Ph_R_Group.create(
             {
                 title: 'ТГ-терапевтична група',
                 subGroup: res
@@ -25,7 +25,7 @@ PhRSubGroup.create(
     }
 );
 
-PhRSubGroup.create(
+Ph_R_Sub_Group.create(
     [
         {title: 'НГ. Стан після перенесених черепно-мозкових травм'},
         {title: 'НГ. Наслідки гострих порушень мозкового кровообігу, геморагічного інсульту'},
@@ -37,7 +37,7 @@ PhRSubGroup.create(
         {title: 'НГ. Вертеброгенні рефлекторні синдроми'},
     ],
     (err, res) => {
-        PhRGroup.create(
+        Ph_R_Group.create(
             {
                 title: 'НГ-неврологічна',
                 subGroup: res
@@ -47,7 +47,7 @@ PhRSubGroup.create(
 );
 
 
-PhRSubGroup.create(
+Ph_R_Sub_Group.create(
     [
         {title: 'ОТіЧГ Переломи хребта'},
         {title: 'ОТіЧГ Переломи кісток тазу'},
@@ -73,7 +73,7 @@ PhRSubGroup.create(
         {title: 'ОТіЧГ  Досопатія грудного відділу хребта'},
     ],
     (err, res) => {
-        PhRGroup.create(
+        Ph_R_Group.create(
             {
                 title: 'ОТіХГ-Ортопедо-травматологічна і хірургічна',
                 subGroup: res

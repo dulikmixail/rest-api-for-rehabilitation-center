@@ -7,10 +7,10 @@ let mAllowedContraindicationsSchema = new Schema({
         required: true
     },
     subContraindications: {
-        type: Schema.Types.ObjectId,
+        type: [Schema.Types.ObjectId],
         ref: 'M_Allowed_Sub_Contraindications',
     }
 });
 
-let MAllowedContraindications = mongoose.model('M_Allowed_Contraindications', mAllowedContraindicationsSchema);
-module.exports = require('../crud_model')(MAllowedContraindications);
+let M_Allowed_Contraindications = mongoose.model('M_Allowed_Contraindications', mAllowedContraindicationsSchema);
+module.exports = require('../crud_model')(M_Allowed_Contraindications);

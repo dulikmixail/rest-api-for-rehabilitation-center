@@ -15,5 +15,5 @@ let phRFLITitleAndValuesSchema = new Schema({
 });
 
 
-let PhRFLITitleAndValues = mongoose.model('Ph_R_F_L_I_Title_And_Values', phRFLITitleAndValuesSchema);
-module.exports = require('../crud_model')(PhRFLITitleAndValues);
+let Ph_R_F_L_I_Title_And_Values = mongoose.model('Ph_R_F_L_I_Title_And_Values', phRFLITitleAndValuesSchema);
+module.exports = require('../crud_model')(Ph_R_F_L_I_Title_And_Values);

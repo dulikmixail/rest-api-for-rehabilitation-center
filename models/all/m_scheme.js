@@ -8,5 +8,5 @@ let mSchemeSchema = new Schema({
     }
 });
 
-let MScheme = mongoose.model('M_Scheme',mSchemeSchema);
-module.exports = require('../crud_model')(MScheme);
+let M_Scheme = mongoose.model('M_Scheme',mSchemeSchema);
+module.exports = require('../crud_model')(M_Scheme);

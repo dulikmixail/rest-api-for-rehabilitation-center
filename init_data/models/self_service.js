@@ -1,6 +1,6 @@
-const SelfService = require('../../models/all/m_treatment');
+const Self_Service = require('../../models/all/m_treatment');
 
-SelfService.create([
+Self_Service.create([
     {title: 'Не обмежена'},
     {title: 'З використанням допоміжних засобів'},
     {title: 'З використанням допоміжних засобів та з допомогою інших осіб'},

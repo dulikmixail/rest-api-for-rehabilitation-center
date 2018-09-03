@@ -20,7 +20,7 @@ let historyIncomingSchema = new Schema({
     },
     howIncoming: {
         type: Schema.Types.ObjectId,
-        ref: 'HowIncoming',
+        ref: 'How_Incoming',
     },
     issuanceDate: {
         type: Date
@@ -46,5 +46,5 @@ let historyIncomingSchema = new Schema({
     }
 });
 
-let HistoryIncoming = mongoose.model('History_Incoming',historyIncomingSchema);
-module.exports = require('../crud_model')(HistoryIncoming);
+let History_Incoming = mongoose.model('History_Incoming',historyIncomingSchema);
+module.exports = require('../crud_model')(History_Incoming);

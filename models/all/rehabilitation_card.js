@@ -13,5 +13,5 @@ let rehabilitationCardSchema = new Schema({
 
 });
 
-let RehabilitationCard = mongoose.model('Rehabilitation_Card', rehabilitationCardSchema);
-module.exports = require('../crud_model')(RehabilitationCard);
+let Rehabilitation_Card = mongoose.model('Rehabilitation_Card', rehabilitationCardSchema);
+module.exports = require('../crud_model')(Rehabilitation_Card);

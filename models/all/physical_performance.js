@@ -2,12 +2,9 @@ const mongoose = require('mongoose')
     , Schema = mongoose.Schema;
 
 let physicalPerformanceSchema = new Schema({
-    difficulty: {
-        type: Number,
-        required: true
-    },
-    title: {
-        type: String,
+    mode_of_motor_activity: {
+        type: Schema.Types.ObjectId,
+        ref: 'Mode_Of_Motor_Activity',
         required: true
     },
     thresholdLoadInMen: {
@@ -29,5 +26,5 @@ let physicalPerformanceSchema = new Schema({
 });
 
 
-let PhysicalPerformance = mongoose.model('Physical_Performance', physicalPerformanceSchema);
-module.exports = require('../crud_model')(PhysicalPerformance);
+let Physical_Performance = mongoose.model('Physical_Performance', physicalPerformanceSchema);
+module.exports = require('../crud_model')(Physical_Performance);

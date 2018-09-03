@@ -1,45 +1,45 @@
-const PhRForm = require('../../models/all/ph_r_form');
-const PhRFLevel = require('../../models/all/ph_r_f_level');
-const PhRFLInfo = require('../../models/all/ph_r_f_l_info');
-const PhRFLITitle = require('../../models/all/ph_r_f_l_i_title');
-const PhRFLIValue = require('../../models/all/ph_r_f_l_i_value');
-const PhRFLTitle = require('../../models/all/ph_r_f_l_title');
-const ModeOfMotorActivity = require('../../models/all/mode_of_motor_activity');
+const Ph_R_Form = require('../../models/all/ph_r_form');
+const Ph_R_F_Level = require('../../models/all/ph_r_f_level');
+const Ph_R_F_L_Info = require('../../models/all/ph_r_f_l_info');
+const Ph_R_F_L_I_Title = require('../../models/all/ph_r_f_l_i_title');
+const Ph_R_F_L_I_Value = require('../../models/all/ph_r_f_l_i_value');
+const Ph_R_F_L_Title = require('../../models/all/ph_r_f_l_title');
+const Mode_Of_Motor_Activity = require('../../models/all/mode_of_motor_activity');
 const PromiseHelper = require('../promise_helper/index');
 
 let createLevel = function (lTitle, lITitleArr, lIValueArr, modeOfMotorActivity, callback) {
     Promise.all(
         [
             new Promise((resolve, reject) => {
-                PhRFLTitle.find(lTitle, (err, title) => {
+                Ph_R_F_L_Title.find(lTitle, (err, title) => {
                     err ? reject(err) : resolve(title);
                 })
             }),
             new Promise((resolve, reject) => {
                 PromiseHelper.oneToOne(
-                    PhRFLITitle,
+                    Ph_R_F_L_I_Title,
                     lITitleArr,
-                    PhRFLIValue,
+                    Ph_R_F_L_I_Value,
                     lIValueArr,
                     (values) => {
                         let arr = [];
                         values[0].forEach((item, i) => {
                             arr.push({title: item, value: values[1][i]})
                         });
-                        PhRFLInfo.create(arr, (err, info) => {
+                        Ph_R_F_L_Info.create(arr, (err, info) => {
                             err ? reject(err) : resolve(info);
                         })
                     }
                 );
             }),
             new Promise((resolve, reject) => {
-                ModeOfMotorActivity.find(modeOfMotorActivity, (err, activity) => {
+                Mode_Of_Motor_Activity.find(modeOfMotorActivity, (err, activity) => {
                     err ? reject(err) : resolve(activity);
                 })
             })
         ]
     ).then(values => {
-        PhRFLevel.create({
+        Ph_R_F_Level.create({
                 title: values[0][0],
                 info: values[1],
                 mode_of_motor_activity: values[2][0]
@@ -61,7 +61,7 @@ let createForm = function (form, levelsArray) {
         }))
     });
     Promise.all(promisesArray).then(values => {
-        PhRForm.create(
+        Ph_R_Form.create(
             {
                 title: form.title,
                 level: values
@@ -73,7 +73,7 @@ let createForm = function (form, levelsArray) {
 };
 
 let createSimpleForm = function () {
-    PhRForm.create([
+    Ph_R_Form.create([
         {
             title: 'РГ - Ранкова гімнастика'
         },

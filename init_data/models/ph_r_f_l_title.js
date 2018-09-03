@@ -1,4 +1,4 @@
-const PhRFLTitle = require('../../models/all/ph_r_f_l_title');
+const Ph_R_F_L_Title = require('../../models/all/ph_r_f_l_title');
 
 let arr = [
     {title: 'Режим I (щадний)'},
@@ -12,7 +12,7 @@ let arr = [
 ];
 
 module.exports = new Promise((resolve, reject) => {
-    PhRFLTitle.create(arr, (err, res) => {
+    Ph_R_F_L_Title.create(arr, (err, res) => {
         if (err) {
             reject(err)
         } else {

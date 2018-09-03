@@ -16,5 +16,5 @@ let phRFLInfoSchema = new Schema({
 });
 
 
-let PhRFLInfo = mongoose.model('Ph_R_F_L_Info',phRFLInfoSchema);
-module.exports = require('../crud_model')(PhRFLInfo);
+let Ph_R_F_L_Info = mongoose.model('Ph_R_F_L_Info',phRFLInfoSchema);
+module.exports = require('../crud_model')(Ph_R_F_L_Info);

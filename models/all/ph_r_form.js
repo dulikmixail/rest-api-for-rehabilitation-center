@@ -12,5 +12,5 @@ let phRFormSchema = new Schema({
     }
 });
 
-let PhRForm = mongoose.model('Ph_R_Form', phRFormSchema);
-module.exports = require('../crud_model')(PhRForm);
+let Ph_R_Form = mongoose.model('Ph_R_Form', phRFormSchema);
+module.exports = require('../crud_model')(Ph_R_Form);

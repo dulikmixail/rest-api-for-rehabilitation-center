@@ -20,5 +20,5 @@ let evEffOrthostaticTestSchema = new Schema({
     }
 });
 
-let EvEffOrthostaticTest = mongoose.model('Ev_Eff_Orthostatic_Test', evEffOrthostaticTestSchema);
-module.exports = require('../crud_model')(EvEffOrthostaticTest);
+let Ev_Eff_Orthostatic_Test = mongoose.model('Ev_Eff_Orthostatic_Test', evEffOrthostaticTestSchema);
+module.exports = require('../crud_model')(Ev_Eff_Orthostatic_Test);

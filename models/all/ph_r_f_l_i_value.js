@@ -9,5 +9,5 @@ let phRFLIValueSchema = new Schema({
 });
 
 
-let PhRFLIValue = mongoose.model('Ph_R_F_L_I_Value',phRFLIValueSchema);
-module.exports = require('../crud_model')(PhRFLIValue);
+let Ph_R_F_L_I_Value = mongoose.model('Ph_R_F_L_I_Value',phRFLIValueSchema);
+module.exports = require('../crud_model')(Ph_R_F_L_I_Value);

@@ -16,5 +16,5 @@ let evEffAdaptationPotentialBayevskySchema = new Schema({
     }
 });
 
-let EvEffAdaptationPotentialBayevsky = mongoose.model('Ev_Eff_Adaptation_Potential_Bayevsky', evEffAdaptationPotentialBayevskySchema);
-module.exports = require('../crud_model')(EvEffAdaptationPotentialBayevsky);
+let Ev_Eff_Adaptation_Potential_Bayevsky = mongoose.model('Ev_Eff_Adaptation_Potential_Bayevsky', evEffAdaptationPotentialBayevskySchema);
+module.exports = require('../crud_model')(Ev_Eff_Adaptation_Potential_Bayevsky);

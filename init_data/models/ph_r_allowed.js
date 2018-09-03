@@ -1,7 +1,7 @@
-const PhRAllowed = require('../../models/all/ph_r_allowed');
+const Ph_R_Allowed = require('../../models/all/ph_r_allowed');
 
 //
-PhRAllowed.create([
+Ph_R_Allowed.create([
     {
         isAllowed: true,
         description: 'Протипоказання до призначення фізичної реабілітації  відсутні.'

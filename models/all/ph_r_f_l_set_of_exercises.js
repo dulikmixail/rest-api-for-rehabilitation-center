@@ -8,5 +8,5 @@ let phRFLSetOfExercisesSchema = new Schema({
     }
 });
 
-let PhRFLSetOfExercises = mongoose.model('Ph_R_F_L_Set_Of_Exercises', phRFLSetOfExercisesSchema);
-module.exports = require('../crud_model')(PhRFLSetOfExercises);
+let Ph_R_F_L_Set_Of_Exercises = mongoose.model('Ph_R_F_L_Set_Of_Exercises', phRFLSetOfExercisesSchema);
+module.exports = require('../crud_model')(Ph_R_F_L_Set_Of_Exercises);

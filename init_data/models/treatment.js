@@ -1,6 +1,6 @@
-const MTreatment = require('../../models/all/m_treatment');
+const Treatment = require('../../models/all/treatment');
 
-MTreatment.create([
+Treatment.create([
     {title: 'Лікарняний'},
     {title: 'Після лікарняний '},
 ]);

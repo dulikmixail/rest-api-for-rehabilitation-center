@@ -2,44 +2,16 @@ const mongoose = require('mongoose')
     , Schema = mongoose.Schema;
 
 let mClassifierSchema = new Schema({
-    appointment: {
-        type: Schema.Types.ObjectId,
-        ref: 'M_Cl_Appointment'
+    title: {
+        type: String,
+        required: true
     },
-    intervention: {
-        type: Schema.Types.ObjectId,
-        ref: 'M_Cl_Intervention'
+    values: {
+        type: [Schema.Types.ObjectId],
+        ref: 'M_Cl_Value'
     },
-    worker: {
-        type: Schema.Types.ObjectId,
-        ref: 'M_Cl_Worker'
-    },
-    type: {
-        type: Schema.Types.ObjectId,
-        ref: 'M_Cl_Type'
-    },
-    effectsOnBody: {
-        type: Schema.Types.ObjectId,
-        ref: 'M_Cl_Effects_On_Body'
-    },
-    characterAndForm: {
-        type: Schema.Types.ObjectId,
-        ref: 'M_Cl_Effects_On_Body'
-    },
-    conditionOfPatient: {
-        type: Schema.Types.ObjectId,
-        ref: 'M_Cl_Effects_On_Body'
-    },
-    toneOfSympathoadrenalSystem: {
-        type: Schema.Types.ObjectId,
-        ref: 'M_Cl_Effects_On_Body'
-    },
-    individualSigns: {
-        type: Schema.Types.ObjectId,
-        ref: 'M_Cl_Individual_Signs'
-    }
 });
 
 
-let MClassifier = mongoose.model('M_Classifier', mClassifierSchema);
-module.exports = require('../crud_model')(MClassifier);
+let M_Classifier = mongoose.model('M_Classifier', mClassifierSchema);
+module.exports = require('../crud_model')(M_Classifier);

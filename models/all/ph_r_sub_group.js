@@ -8,5 +8,5 @@ let phRSubGroupSchema = new Schema({
     }
 });
 
-let PhRSubGroup = mongoose.model('Ph_R_Sub_Group', phRSubGroupSchema);
-module.exports = require('../crud_model')(PhRSubGroup);
+let Ph_R_Sub_Group = mongoose.model('Ph_R_Sub_Group', phRSubGroupSchema);
+module.exports = require('../crud_model')(Ph_R_Sub_Group);

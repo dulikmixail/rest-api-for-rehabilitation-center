@@ -17,5 +17,5 @@ let mDurationSchema = new Schema({
 });
 
 
-let MDuration = mongoose.model('M_Duration',mDurationSchema);
-module.exports = require('../crud_model')(MDuration);
+let M_Duration = mongoose.model('M_Duration',mDurationSchema);
+module.exports = require('../crud_model')(M_Duration);
