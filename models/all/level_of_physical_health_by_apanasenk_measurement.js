@@ -38,7 +38,7 @@ let levelOfPhysicalHealthByApanasenkMeasurementSchema = new Schema({
     conclusions: {
         type: String
     }
-});
+}, {versionKey: false});
 
 
 let Level_Of_Physical_Health_By_Apanasenk_Measurement = mongoose.model('Level_Of_Physical_Health_By_Apanasenk_Measurement', levelOfPhysicalHealthByApanasenkMeasurementSchema);

@@ -6,7 +6,7 @@ let contraindicationsSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'M_Allowed'
     }
-});
+}, {versionKey: false});
 
 let Contraindications = mongoose.model('Contraindications', contraindicationsSchema);
 module.exports = require('../crud_model')(Contraindications);

@@ -7,7 +7,7 @@ let genderSchema = new Schema({
         type: String,
         required: true
     }
-});
+}, {versionKey: false});
 
 let Gender = mongoose.model('Gender', genderSchema);
 module.exports = require('../crud_model')(Gender);

@@ -10,7 +10,7 @@ const should = chai.should();
 chai.use(chaiHttp);
 
 describe('Employee', () => {
-    beforeEach((done) => { //Перед каждым тестом чистим базу
+    beforeEach((done) => {
         Employee.deleteAll();
     });
 });

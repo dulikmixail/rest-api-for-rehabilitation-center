@@ -14,7 +14,7 @@ let mClGroupSchema = new Schema({
         type: [Schema.Types.ObjectId],
         ref: 'M_Classifier'
     }
-});
+}, {versionKey: false});
 
 
 let M_Cl_Group = mongoose.model('M_Cl_Group', mClGroupSchema);

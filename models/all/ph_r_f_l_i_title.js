@@ -6,7 +6,7 @@ let phRFLITitleSchema = new Schema({
         type: String,
         required: true
     },
-});
+}, {versionKey: false});
 
 
 let Ph_R_F_L_I_Title = mongoose.model('Ph_R_F_L_I_Title',phRFLITitleSchema);

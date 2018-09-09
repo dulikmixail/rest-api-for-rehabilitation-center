@@ -1,5 +1,6 @@
 const M_Allowed_Contraindications = require('../../models/all/m_allowed_contraindications');
 const M_Allowed_Sub_Contraindications = require('../../models/all/m_allowed_sub_contraindications');
+const promiseHelper = require('../promise_helper');
 
 let arr = [
     {title: '1. Захворювання шкіри, нігтів, волосистої частини голови інфекційного, грибкового та невизначеного характеру, різні шкірні висипання, пошкодження,  подразнення шкіри.'},
@@ -39,15 +40,7 @@ let arr = [
 
 module.exports = new Promise((resolve, reject) => {
     Promise.all([
-        new Promise((resolve1, reject1) => {
-            M_Allowed_Contraindications.create(arr, (err, res) => {
-                if (err) {
-                    reject1(err)
-                } else {
-                    resolve1(res)
-                }
-            });
-        }),
+        promiseHelper.getManyPromiseCreateModel(M_Allowed_Contraindications,arr),
         new Promise((resolve1, reject1) => {
             M_Allowed_Sub_Contraindications.create(
                 [
@@ -76,12 +69,11 @@ module.exports = new Promise((resolve, reject) => {
             );
         })
     ]).then(values => {
-        if (values.length !== 0) {
-            resolve(values);
-        } else {
+        if (values.length === 0) {
             reject("Error create M_Allowed_Sub_Contraindications")
+        } else {
+            resolve(values);
         }
     });
-
 });
 

@@ -26,7 +26,7 @@ let evEffOrthTMeasurementSchema = new Schema({
     vegetativeReactions: {
         type: String
     }
-});
+}, {versionKey: false});
 
 let Ev_Eff_Orth_T_Measurement = mongoose.model('Ev_Eff_Orth_T_Measurement', evEffOrthTMeasurementSchema);
 module.exports = require('../crud_model')(Ev_Eff_Orth_T_Measurement);

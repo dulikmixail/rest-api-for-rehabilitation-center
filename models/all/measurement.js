@@ -21,7 +21,7 @@ let measurementSchema = new Schema({
     signsOfFatigue:{
         type: String
     }
-});
+}, {versionKey: false});
 
 let Measurement = mongoose.model('Measurement', measurementSchema);
 module.exports = require('../crud_model')(Measurement);

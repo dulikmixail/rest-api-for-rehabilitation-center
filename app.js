@@ -7,14 +7,18 @@ const db = mongoose.connection;
 
 mongoose.connect(config.DBHost, {useNewUrlParser: true, keepAlive: 1, connectTimeoutMS: 30000});
 
-
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
-    console.log("Connect to DB " + config.DBHost + " SUCCESS")
-    require('./init_data');
-    // we're connected!
+    console.log("Connect to DB " + config.DBHost + " SUCCESS");
+    Promise.all(
+        [
+            require('./init_data')
+        ]
+    ).then(() => {
+        console.log('Data initialization successful');
+        // require('./test_data');
+    })
 });
-
 
 app.set('port', process.env.PORT || 3000);
 
@@ -24,20 +28,20 @@ if (config.util.getEnv('NODE_ENV') !== 'test') {
     app.use(morgan('combined')); //'combined' выводит логи в стиле apache
 }
 
-
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-
 const indexRouter = require('./routes/index');
-const postRouter = require('./routes/post');
 
-function getRouters(){
+function getRouters() {
     // 'MongooseModel', '/RoutPath'
     let crudRouters = [
-        'assessment_of_functional_capability','/assessment_of_functional_capabilities',
+        'assessment_of_functional_capability', '/assessment_of_functional_capabilities',
         'branch', '/branches',
-        'employee', '/employees'];
+        'employee', '/employees',
+        'post', '/posts',
+        'exercise_therapy_and_mechanotherapy_item', '/exercise_therapy_and_mechanotherapy_items'
+    ];
     let routers = [];
     for (let i = 0; i < crudRouters.length; i += 2) {
         routers.push(require('./routes/crud_router')(crudRouters[i], crudRouters[i + 1]))
@@ -53,6 +57,5 @@ app.use('/api', getRouters());
 app.listen(app.get('port'), () => {
     console.log('Server start localhost:' + app.get('port') + '. Go go next!')
 });
-
 
 module.exports = app; // for testing

@@ -15,7 +15,7 @@ let examinationSchema = new Schema({
     date:{
       type: Date
     }
-});
+}, {versionKey: false});
 
 let Examination = mongoose.model('Examination',examinationSchema);
 module.exports = require('../crud_model')(Examination);

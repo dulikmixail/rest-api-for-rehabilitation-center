@@ -1,6 +1,8 @@
 const M_Duration = require('../../models/all/m_duration');
+const promiseHelper = require('../promise_helper');
 
-M_Duration.create(
+module.exports = promiseHelper.getPromiseCreateModel(
+    M_Duration,
     [
         {
             title: 'Масаж голови (лобно-скроневої та потилично-тім’яної ділянок)',
@@ -132,8 +134,5 @@ M_Duration.create(
             numberOfUnits: 3.0,
             minutes: 30
         },
-    ],
-    (err, res) => {
-        if (err) throw err;
-    }
+    ]
 );

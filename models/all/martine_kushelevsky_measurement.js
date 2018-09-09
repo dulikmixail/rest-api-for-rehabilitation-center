@@ -29,7 +29,7 @@ let martineKushelevskyMeasurementSchema = new Schema({
     pulsePressure3min: {
         type: String
     }
-});
+}, {versionKey: false});
 
 
 let Martine_Kushelevsky_Measurement = mongoose.model('Martine_Kushelevsky_Measurement', martineKushelevskyMeasurementSchema);

@@ -74,7 +74,7 @@ let CalculationSchema = new Schema({
     recommendations6: {
         type: String
     },
-});
+}, {versionKey: false});
 
 let Calculation = mongoose.model('Calculation', CalculationSchema);
 module.exports = require('../crud_model')(Calculation);

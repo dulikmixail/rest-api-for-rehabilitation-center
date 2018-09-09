@@ -13,7 +13,7 @@ let phRFLInfoSchema = new Schema({
         required:true
     },
 
-});
+}, {versionKey: false});
 
 
 let Ph_R_F_L_Info = mongoose.model('Ph_R_F_L_Info',phRFLInfoSchema);

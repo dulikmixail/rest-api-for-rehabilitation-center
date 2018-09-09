@@ -16,7 +16,7 @@ let indeksSkibinskoyMeasurementSchema = new Schema({
     value: {
         type: String
     }
-});
+}, {versionKey: false});
 
 let Indeks_Skibinskoy_Measurement = mongoose.model('Indeks_Skibinskoy_Measurement', indeksSkibinskoyMeasurementSchema);
 module.exports = require('../crud_model')(Indeks_Skibinskoy_Measurement);

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
     , Schema = mongoose.Schema;
+const deepPopulate = require('mongoose-deep-populate')(mongoose);
 
 let employeeSchema = new Schema({
     itemNo: {
@@ -61,7 +62,9 @@ let employeeSchema = new Schema({
         select: false,
         required: true
     }
-});
+}, {versionKey: false});
+
+employeeSchema.plugin(deepPopulate);
 
 let Employee = mongoose.model('Employee', employeeSchema);
-module.exports = require('../crud_model')(Employee, ['post']);
+module.exports = require('../crud_model')(Employee);

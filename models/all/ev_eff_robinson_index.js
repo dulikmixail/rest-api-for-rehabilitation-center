@@ -14,7 +14,7 @@ let evEffRobinsonIndexSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Ev_Eff_R_Ind_Measurement'
     }
-});
+}, {versionKey: false});
 
 
 let Ev_Eff_Robinson_Index = mongoose.model('Ev_Eff_Robinson_Index', evEffRobinsonIndexSchema);

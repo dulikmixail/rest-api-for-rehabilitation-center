@@ -10,7 +10,7 @@ let mClassifierSchema = new Schema({
         type: [Schema.Types.ObjectId],
         ref: 'M_Cl_Value'
     },
-});
+}, {versionKey: false});
 
 
 let M_Classifier = mongoose.model('M_Classifier', mClassifierSchema);

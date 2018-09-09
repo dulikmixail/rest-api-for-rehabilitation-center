@@ -11,7 +11,7 @@ let rehabilitationCardSchema = new Schema({
         ref: 'RC_Records'
     },
 
-});
+}, {versionKey: false});
 
 let Rehabilitation_Card = mongoose.model('Rehabilitation_Card', rehabilitationCardSchema);
 module.exports = require('../crud_model')(Rehabilitation_Card);

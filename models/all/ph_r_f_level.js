@@ -19,7 +19,7 @@ let phRFLevelSchema = new Schema({
         ref: 'Ph_R_F_L_Set_Of_Exercises'
     },
 
-});
+}, {versionKey: false});
 
 let Ph_R_F_Level = mongoose.model('Ph_R_F_Level', phRFLevelSchema);
 module.exports = require('../crud_model')(Ph_R_F_Level);

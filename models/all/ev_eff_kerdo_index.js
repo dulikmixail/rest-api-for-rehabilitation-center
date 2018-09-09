@@ -14,7 +14,7 @@ let evEffKerdoIndexSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: ''
     }
-});
+}, {versionKey: false});
 
 
 let Ev_Eff_Kerdo_Index = mongoose.model('Ev_Eff_Kerdo_Index', evEffKerdoIndexSchema);

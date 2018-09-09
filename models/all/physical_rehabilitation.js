@@ -15,7 +15,7 @@ let physicalRehabilitationSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Ph_R_Allowed'
     }
-});
+}, {versionKey: false});
 
 let Physical_Rehabilitation = mongoose.model('Physical_Rehabilitation', physicalRehabilitationSchema);
 module.exports = require('../crud_model')(Physical_Rehabilitation);

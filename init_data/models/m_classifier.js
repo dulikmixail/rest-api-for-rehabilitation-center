@@ -1,18 +1,17 @@
 const M_Classifier = require('../../models/all/m_classifier');
 const M_Cl_Value = require('../../models/all/m_cl_value');
-const PromiseHelper = require('../promise_helper/index');
+const promiseHelper = require('../promise_helper');
 
 module.exports = new Promise((resolve, reject) => {
-
     let oneToMany = function (valueOne, valuesMany, callback) {
-        Promise.all(PromiseHelper.getManyFindModel(
+        Promise.all(promiseHelper.getManyPromiseFindModel(
             M_Cl_Value,
             valuesMany
         )).then(values => {
             M_Classifier.create(
                 {
                     title: valueOne.title,
-                    values: PromiseHelper.joinAllResults(values),
+                    values: promiseHelper.joinAllArrayResults(values),
                 },
                 callback
             );
@@ -41,7 +40,11 @@ module.exports = new Promise((resolve, reject) => {
         });
 
         Promise.all(promisesArray).then(values => {
-            resolve(values)
+            if (values.length === 0) {
+                reject("Error create M_Classifier")
+            } else {
+                resolve(values)
+            }
         });
     };
 

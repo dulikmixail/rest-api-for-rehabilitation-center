@@ -14,7 +14,7 @@ let evEffAdaptationPotentialBayevskySchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Ev_Eff_Ad_P_B_Measurement'
     }
-});
+}, {versionKey: false});
 
 let Ev_Eff_Adaptation_Potential_Bayevsky = mongoose.model('Ev_Eff_Adaptation_Potential_Bayevsky', evEffAdaptationPotentialBayevskySchema);
 module.exports = require('../crud_model')(Ev_Eff_Adaptation_Potential_Bayevsky);

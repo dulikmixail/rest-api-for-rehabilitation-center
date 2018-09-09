@@ -6,7 +6,7 @@ let modeOfMotorActivitySchema = new Schema({
         type: String,
         required: true
     }
-});
+}, {versionKey: false});
 
 let Mode_Of_Motor_Activity = mongoose.model('Mode_Of_Motor_Activity', modeOfMotorActivitySchema);
 module.exports = require('../crud_model')(Mode_Of_Motor_Activity);

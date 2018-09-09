@@ -18,7 +18,7 @@ let evEffOrthostaticTestSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Ev_Eff_Orth_T_Measurement'
     }
-});
+}, {versionKey: false});
 
 let Ev_Eff_Orthostatic_Test = mongoose.model('Ev_Eff_Orthostatic_Test', evEffOrthostaticTestSchema);
 module.exports = require('../crud_model')(Ev_Eff_Orthostatic_Test);

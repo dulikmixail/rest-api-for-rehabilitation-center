@@ -6,7 +6,7 @@ let phRFLTitleSchema = new Schema({
         type: String,
         required: true
     },
-});
+}, {versionKey: false});
 
 let Ph_R_F_L_Title = mongoose.model('Ph_R_F_L_Title', phRFLTitleSchema);
 module.exports = require('../crud_model')(Ph_R_F_L_Title);

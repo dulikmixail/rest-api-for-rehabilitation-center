@@ -44,7 +44,7 @@ let historyIncomingSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Examination'
     }
-});
+}, {versionKey: false});
 
 let History_Incoming = mongoose.model('History_Incoming',historyIncomingSchema);
 module.exports = require('../crud_model')(History_Incoming);

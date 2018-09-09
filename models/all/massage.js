@@ -26,7 +26,7 @@ let massageSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'M_Scheme'
     }
-});
+}, {versionKey: false});
 
 let Massage = mongoose.model('Massage',massageSchema);
 module.exports = require('../crud_model')(Massage);

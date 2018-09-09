@@ -10,7 +10,7 @@ let mAllowedContraindicationsSchema = new Schema({
         type: [Schema.Types.ObjectId],
         ref: 'M_Allowed_Sub_Contraindications',
     }
-});
+}, {versionKey: false});
 
 let M_Allowed_Contraindications = mongoose.model('M_Allowed_Contraindications', mAllowedContraindicationsSchema);
 module.exports = require('../crud_model')(M_Allowed_Contraindications);

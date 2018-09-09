@@ -53,7 +53,7 @@ let patientSchema = new mongoose.Schema({
         select: false,
         required: true
     },
-});
+}, {versionKey: false});
 
 let Patient = mongoose.model('Patient', patientSchema);
 module.exports = require('../crud_model')(Patient);

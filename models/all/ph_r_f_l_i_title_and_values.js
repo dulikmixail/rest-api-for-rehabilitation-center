@@ -12,7 +12,7 @@ let phRFLITitleAndValuesSchema = new Schema({
         ref: 'Ph_R_F_L_I_Value',
         required: true
     }
-});
+}, {versionKey: false});
 
 
 let Ph_R_F_L_I_Title_And_Values = mongoose.model('Ph_R_F_L_I_Title_And_Values', phRFLITitleAndValuesSchema);

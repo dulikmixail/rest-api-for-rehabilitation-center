@@ -9,7 +9,7 @@ let phRAllowedSchema = new Schema({
     description: {
         type: String
     }
-});
+}, {versionKey: false});
 
 let Ph_R_Allowed = mongoose.model('Ph_R_Allowed', phRAllowedSchema);
 module.exports = require('../crud_model')(Ph_R_Allowed);

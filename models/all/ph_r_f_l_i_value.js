@@ -6,7 +6,7 @@ let phRFLIValueSchema = new Schema({
         type: String,
         required: true
     },
-});
+}, {versionKey: false});
 
 
 let Ph_R_F_L_I_Value = mongoose.model('Ph_R_F_L_I_Value',phRFLIValueSchema);

@@ -35,7 +35,7 @@ let rufyeMeasurementSchema = new Schema({
     loadValue:{
         type: String
     }
-});
+}, {versionKey: false});
 
 
 let Rufye_Measurement = mongoose.model('Rufye_Measurement', rufyeMeasurementSchema);

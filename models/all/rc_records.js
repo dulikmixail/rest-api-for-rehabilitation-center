@@ -42,7 +42,7 @@ let rCRecordsSchema = new Schema({
         ref: 'Contraindications'
     },
 
-});
+}, {versionKey: false});
 
 let RC_Records = mongoose.model('RC_Records', rCRecordsSchema);
 module.exports = require('../crud_model')(RC_Records);

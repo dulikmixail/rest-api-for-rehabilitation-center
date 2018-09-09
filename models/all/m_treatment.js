@@ -11,7 +11,7 @@ const mongoose = require('mongoose')
         required: true
     }
 
-});
+}, {versionKey: false});
 
 let M_Treatment = mongoose.model('M_Treatment', mTreatmentSchema);
 module.exports = require('../crud_model')(M_Treatment);

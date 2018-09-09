@@ -6,7 +6,7 @@ let mAllowedLevelSchema = new Schema({
         type: String,
         required: true
     }
-});
+}, {versionKey: false});
 
 let M_Allowed_Level = mongoose.model('M_Allowed_Level', mAllowedLevelSchema);
 module.exports = require('../crud_model')(M_Allowed_Level);

@@ -6,7 +6,7 @@ let psychologicalStatusSchema = new Schema({
         type: String,
         required: true
     }
-});
+}, {versionKey: false});
 
 let Psychological_Status = mongoose.model('Psychological_Status', psychologicalStatusSchema);
 module.exports = require('../crud_model')(Psychological_Status);

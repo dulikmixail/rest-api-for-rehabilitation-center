@@ -26,7 +26,7 @@ let evEffKIndMeasurementSchema = new Schema({
     recommendation: {
         type: String
     }
-});
+}, {versionKey: false});
 
 let Ev_Eff_K_Ind_Measurement = mongoose.model('Ev_Eff_K_Ind_Measurement', evEffKIndMeasurementSchema);
 module.exports = require('../crud_model')(Ev_Eff_K_Ind_Measurement);

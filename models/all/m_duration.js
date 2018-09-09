@@ -14,7 +14,7 @@ let mDurationSchema = new Schema({
         type: Number,
         required: true
     }
-});
+}, {versionKey: false});
 
 
 let M_Duration = mongoose.model('M_Duration',mDurationSchema);

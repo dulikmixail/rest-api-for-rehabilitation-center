@@ -1,13 +1,15 @@
 const Post = require('../../models/all/post');
+const promiseHelper = require('../promise_helper');
 
-Post.create([
-    {title: 'Лікар'},
-    {title: 'Реабілітолог'},
-    {title: 'Фізичний терапевт'},
-    {title: 'Фізіотерапевт'},
-    {title: 'Діетолог'},
-    {title: 'Бальнео терапевт'},
-    {title: 'Медсестра'},
-],(err,result)=>{
-    require('./employee');
-});
+module.exports = promiseHelper.getPromiseCreateModel(
+    Post,
+    [
+        {title: 'Лікар'},
+        {title: 'Реабілітолог'},
+        {title: 'Фізичний терапевт'},
+        {title: 'Фізіотерапевт'},
+        {title: 'Діетолог'},
+        {title: 'Бальнео терапевт'},
+        {title: 'Медсестра'},
+    ]
+);

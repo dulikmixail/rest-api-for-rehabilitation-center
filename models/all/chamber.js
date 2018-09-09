@@ -7,7 +7,7 @@ let chamberSchema = new Schema({
         type: Number,
         required: true
     }
-});
+}, {versionKey: false});
 
 let Сhamber = mongoose.model('Сhamber', chamberSchema);
 module.exports = require('../crud_model')(Сhamber);

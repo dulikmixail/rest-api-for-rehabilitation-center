@@ -10,7 +10,7 @@ let phRGroupSchema = new Schema({
         type: [Schema.Types.ObjectId],
         ref: 'Ph_R_Sub_Group'
     }
-});
+}, {versionKey: false});
 
 let Ph_R_Group = mongoose.model('Ph_R_Group', phRGroupSchema);
 module.exports = require('../crud_model')(Ph_R_Group);

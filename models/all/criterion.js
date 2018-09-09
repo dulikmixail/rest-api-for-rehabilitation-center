@@ -6,7 +6,7 @@ let criterionSchema = new Schema({
         type: String,
         required: true
     }
-});
+}, {versionKey: false});
 
 let Criterion = mongoose.model('Criterion', criterionSchema);
 module.exports = require('../crud_model')(Criterion);

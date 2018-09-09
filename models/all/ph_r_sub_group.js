@@ -6,7 +6,7 @@ let phRSubGroupSchema = new Schema({
         type: String,
         required: true
     }
-});
+}, {versionKey: false});
 
 let Ph_R_Sub_Group = mongoose.model('Ph_R_Sub_Group', phRSubGroupSchema);
 module.exports = require('../crud_model')(Ph_R_Sub_Group);

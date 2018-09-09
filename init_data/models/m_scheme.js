@@ -1,6 +1,8 @@
 const M_Scheme = require('../../models/all/m_scheme');
+const promiseHelper = require('../promise_helper');
 
-M_Scheme.create(
+module.exports = promiseHelper.getPromiseCreateModel(
+    M_Scheme,
     [
         {
             title: 'Заспокійлива методика',
@@ -17,8 +19,5 @@ M_Scheme.create(
         {
             title: 'Гармонізуюча методика',
         },
-    ],
-    (err, res) => {
-        if (err) throw err;
-    }
+    ]
 );

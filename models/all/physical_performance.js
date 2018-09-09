@@ -23,7 +23,7 @@ let physicalPerformanceSchema = new Schema({
         type: Number,
         required: true
     }
-});
+}, {versionKey: false});
 
 
 let Physical_Performance = mongoose.model('Physical_Performance', physicalPerformanceSchema);

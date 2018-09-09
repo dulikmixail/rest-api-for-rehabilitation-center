@@ -7,7 +7,7 @@ let nutritionistSchema = new Schema({
         type: String,
         required: true
     }
-});
+}, {versionKey: false});
 
 let Nutritionist = mongoose.model('Nutritionist', nutritionistSchema);
 module.exports = require('../crud_model')(Nutritionist);

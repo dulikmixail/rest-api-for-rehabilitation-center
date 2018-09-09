@@ -7,7 +7,7 @@ let postSchema = new Schema({
         type: String,
         required: true
     }
-});
+}, {versionKey: false});
 
 let Post = mongoose.model('Post', postSchema);
 module.exports = require('../crud_model')(Post);

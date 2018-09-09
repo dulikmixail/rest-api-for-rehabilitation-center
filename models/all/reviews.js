@@ -15,7 +15,7 @@ let reviewSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Patient'
     }
-});
+}, {versionKey: false});
 
 let Review = mongoose.model('Review', reviewSchema);
 module.exports = require('../crud_model')(Review);

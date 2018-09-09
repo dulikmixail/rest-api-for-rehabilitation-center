@@ -8,7 +8,7 @@ let phRFLSOfExImageSchema = new Schema({
     description: {
         type: String
     }
-});
+}, {versionKey: false});
 
 let Ph_R_F_L_S_Of_Ex_Image = mongoose.model('Ph_R_F_L_S_Of_Ex_Image', phRFLSOfExImageSchema);
 module.exports = require('../crud_model')(Ph_R_F_L_S_Of_Ex_Image);

@@ -7,7 +7,7 @@ let dietSchema = new Schema({
         type: String,
         required: true
     }
-});
+}, {versionKey: false});
 
 let Diet = mongoose.model('Diet', dietSchema);
 module.exports = require('../crud_model')(Diet);

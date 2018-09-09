@@ -6,7 +6,7 @@ let mClValueSchema = new Schema({
         type: String,
         required: true
     },
-});
+}, {versionKey: false});
 
 
 let M_Cl_Value = mongoose.model('M_Cl_Value', mClValueSchema);

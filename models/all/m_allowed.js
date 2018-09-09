@@ -12,7 +12,7 @@ let mAllowedSchema = new Schema({
         ref: 'M_Allowed_Contraindications',
         required: true
     }
-});
+}, {versionKey: false});
 
 let M_Allowed = mongoose.model('M_Allowed', mAllowedSchema);
 module.exports = require('../crud_model')(M_Allowed);

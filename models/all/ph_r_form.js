@@ -10,7 +10,7 @@ let phRFormSchema = new Schema({
         type: [Schema.Types.ObjectId],
         ref: 'Ph_R_F_Level'
     }
-});
+}, {versionKey: false});
 
 let Ph_R_Form = mongoose.model('Ph_R_Form', phRFormSchema);
 module.exports = require('../crud_model')(Ph_R_Form);

@@ -46,7 +46,7 @@ let korsZaKlapchukaMeasurementSchema = new Schema({
         type: String
     }
 
-});
+}, {versionKey: false});
 
 
 let Kors_Za_Klapchuka_Measurement = mongoose.model('Kors_Za_Klapchuka_Measurement', korsZaKlapchukaMeasurementSchema);
